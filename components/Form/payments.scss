@@ -1,0 +1,60 @@
+.payments-form {
+  label,
+  input {
+    font-size: 13px;
+  }
+
+  label {
+    display: block;
+    margin: 0 0 5px;
+  }
+
+  input {
+    height: 36px;
+  }
+
+  .block {
+    margin-top: 20px;
+
+    .doble-input {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  .input {
+    position: relative;
+    width: 100%;
+    padding: 8px 12px;
+    color: rgba(26,26,26,.9);
+    font-size: 12px;
+    line-height: 1.5;
+    border: 0;
+    box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgb(0 0 0 / 7%), 0 1px 1.5px 0 rgb(0 0 0 / 5%);
+    background: #fff;
+    appearance: none;
+  }
+
+
+  .checkout-input,
+  .top-card-input {
+    border-top-right-radius: 6px;
+  }
+
+  .checkout-input,
+  .top-card-input {
+    border-top-left-radius: 6px;
+  }
+
+  .checkout-input,
+  .left-card-input,
+  .bottom-card-input {
+    border-bottom-left-radius: 6px;
+  }
+
+  .checkout-input,
+  .right-card-input,
+  .bottom-card-input {
+    border-bottom-right-radius: 6px;
+  }
+}
