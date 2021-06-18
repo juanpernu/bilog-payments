@@ -1,0 +1,10 @@
+@media screen and (min-width: 751px) {
+  .button--container {
+    margin-right: 20px;
+    display: inline-block;
+  }
+  .button--container.full-width {
+    margin: 0;
+    width: 100%;
+  }
+}

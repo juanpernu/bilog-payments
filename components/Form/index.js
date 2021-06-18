@@ -1,5 +1,5 @@
 import React from 'react';
-import Payments from './payments';
+import Payments from './Payments';
 
 const forms = {
   payments: Payments,

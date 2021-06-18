@@ -1,0 +1,55 @@
+@media only screen and (max-width: 750px) {
+  .column {
+    display: inline-block;
+    justify-content: left;
+    padding: 20px 30px 0;
+
+    &-title {
+      font-size: 16px;
+    }
+  }
+  .alink {
+    font-size: 14px;
+    padding: 0.3em;
+    color: #999;
+    text-decoration: none;
+    transition: 0.3s ease;
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+    display: block;
+
+    &:visited {
+      color: #999;
+    }
+  }
+}
+
+@media only screen and (min-width: 751px) {
+  .column {
+    display: inline-block;
+    justify-content: left;
+    padding: 50px 50px 0;
+
+    &-title {
+      font-size: 16px;
+    }
+  }
+  .alink {
+    font-size: 14px;
+    padding: 0.3em;
+    color: #999;
+    text-decoration: none;
+    transition: 0.3s ease;
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+    display: block;
+
+    &:visited {
+      color: #999;
+    }
+
+    &:hover {
+      color: #0090ff;
+    }
+  }
+}

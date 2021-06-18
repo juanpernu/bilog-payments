@@ -8,9 +8,14 @@ function MyApp({ Component, pageProps }) {
     <Provider>
       <Head>
         <title>Bilog Payments</title>
+        <meta charSet="utf-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="Bilog Soluciones Informáticas. El nuevo software para la administración del consultorio y/o clínica Odontológica." />
+        <meta name="HandheldFriendly" content="True" />
         <meta property="og:title" content="Bilog Payments" key="title" />
-        <link rel="shortcut icon" href="/favicon.jpg" />
+        <link rel="shortcut icon" href="/static/fav.png" />
+        <link rel="canonical" href="https://www.bilog.com.ar" />
         <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600&display=swap" rel="stylesheet" />
       </Head>
 

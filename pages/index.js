@@ -5,7 +5,7 @@ import { Context } from './context';
 import { test } from '../services/test';
 
 import Card from '../components/Card';
-import Button from '../components/Button';
+import { Button } from '../components/Buttons';
 
 const Index = () => {
   const ProductCardsContent = useContext(Context);
@@ -16,10 +16,11 @@ const Index = () => {
       pathname: '/pay',
       query: {
         version: plan.id,
-        value:plan.value
-      }});
+        value: plan.value
+      }
+    });
   }
- 
+
   return (
     <section className="billing-plans">
       <h2 className="title">Planes de suscripción</h2>
