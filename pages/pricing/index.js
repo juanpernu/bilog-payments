@@ -1,9 +1,11 @@
+import Wizard from "../../components/Form/Wizard";
+
 const Pricing = ({ version, value }) => {
   return (
     <section className="pricing">
-      <p>pricing</p>
+      <Wizard />
     </section>
-  )
+  );
 };
 
 export async function getServerSideProps(req) {
