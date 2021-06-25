@@ -1,38 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Modal from 'react-responsive-modal';
 import ButtonBanner from '../Buttons/ButtonBanner';
 
-class Modalize extends React.Component {
-  constructor(props) {
-    super(props);
+const Modalize = ({ buttonText, modalContent }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
-    this.state = {
-      isOpen: false,
-    }
-  }
+  const onClickModalHandler = () => setIsOpen(!isOpen);
 
-  onOpenModal = () => {
-    this.setState({ isOpen: true });
-  };
-
-  onCloseModal = () => {
-    this.setState({ isOpen: false });
-  };
-
-  render() {
-    const { buttonText, modalContent } = this.props;
-    const { isOpen } = this.state;
-    return (
-      <React.Fragment>
-        <ButtonBanner customClass="terciary" onClick={this.onOpenModal}>
-          {buttonText}
-        </ButtonBanner>
-        <Modal open={isOpen} onClose={this.onCloseModal} center>
-          {modalContent}
-        </Modal>
-      </React.Fragment>
-    )
-  }
+  return (
+    <React.Fragment>
+      <ButtonBanner customClass="terciary" onClick={onClickModalHandler}>
+        {buttonText}
+      </ButtonBanner>
+      <Modal open={isOpen} onClose={onClickModalHandler} center>
+        {modalContent}
+      </Modal>
+    </React.Fragment>
+  )
 }
 
 export default Modalize;

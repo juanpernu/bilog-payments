@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Cloud = ({ width, height, colorStroke, colorFill }) => (
+const Cloud = ({ width = 36, height = 36, colorStroke = '#FFF', colorFill = '#067df7' }) => (
   <svg width={width} height={height} viewBox="0 0 24 24">
     <path
       fill={colorFill}
@@ -47,19 +46,5 @@ const Cloud = ({ width, height, colorStroke, colorFill }) => (
       `} />
   </svg>
 );
-
-Cloud.propTypes = {
-  width: PropTypes.number,
-  height: PropTypes.number,
-  colorStroke: PropTypes.string,
-  colorFill: PropTypes.string,
-};
-
-Cloud.defaultProps = {
-  width: 36,
-  height: 36,
-  colorStroke: '#FFF',
-  colorFill: '#067df7',
-};
 
 export default Cloud;

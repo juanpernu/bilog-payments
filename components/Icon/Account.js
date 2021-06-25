@@ -1,7 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
 
-const Account = ({ width, height, colorStroke, colorFill }) => (
+const Account = ({ width = 36, height = 36, colorStroke = '#FFF', colorFill = '#067df7' }) => (
   <svg width={width} height={height} viewBox="0 0 24 24">
     <path
       fill={colorFill}
@@ -58,19 +57,5 @@ const Account = ({ width, height, colorStroke, colorFill }) => (
       `} />
   </svg>
 );
-
-Account.propTypes = {
-  width: PropTypes.number,
-  height: PropTypes.number,
-  colorStroke: PropTypes.string,
-  colorFill: PropTypes.string,
-};
-
-Account.defaultProps = {
-  width: 36,
-  height: 36,
-  colorStroke: '#FFF',
-  colorFill: '#067df7',
-};
 
 export default Account;

@@ -4,57 +4,62 @@
 @media only screen and (max-width: 750px) {
   .feature-section {
     padding: 30px;
+    
+    &.color-background {
+      background: #f0f9fe;
+    }
   }
-  .feature-section.color-background {
-    background: #f0f9fe;
-  }
-  :global(a.link--primary) {
-    color: rgb(6, 125, 247);
-    text-decoration: none;
-    margin-bottom: 24px;
-    display: inline-block;
-  }
-  .feature :global(a.link--primary) {
-    margin-bottom: 46px;
+  .feature {
+    a.link--primary {
+      color: rgb(6, 125, 247);
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 46px;
+    }
   }
 }
 
 @media only screen and (min-width: 751px) {
   .feature-section {
     border-bottom: 1px solid #dadedf;
-  }
-  .feature-section.color-background {
-    background: #f0f9fe;
-  }
-  .feature-section .feature {
-    width: 100%;
-    margin: 0 auto;
-    padding: 180px 0;
-    max-width: 1024px;
-    text-align: center;
+    
+    &.color-background {
+      background: #f0f9fe;
+      
+      a.link--primary {
+        color: #fff;
+        
+        &:hover {
+          background: rgba(255,255,255,0.1);
+        }
+      }
+    }
+    .feature {
+      width: 100%;
+      margin: 0 auto;
+      padding: 180px 0;
+      max-width: 1024px;
+      text-align: center;
+      
+      a.link--primary {
+        margin: 30px 0;
+        color: rgb(6, 125, 247);
+        text-decoration: none;
+        display: inline-block;
+        padding: 2.5px 5px;
+        border-radius: 5px;
+        
+        &:hover {
+          color: #0076ff;
+          padding: 2.5px 5px;
+          background: rgba(0,118,255,0.1);
+        }
+      }
+    }
   }
   .feature-item--container {
     padding-top: 26px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-  }
-  :global(a.link--primary) {
-    margin: 30px 0;
-    color: rgb(6, 125, 247);
-    text-decoration: none;
-    display: inline-block;
-    padding: 2.5px 5px;
-    border-radius: 5px;
-  }
-  :global(a.link--primary):hover {
-    color: #0076ff;
-    padding: 2.5px 5px;
-    background: rgba(0,118,255,0.1);
-  }
-  .feature-section.color-background :global(a.link--primary) {
-    color: #fff;
-  }
-  .feature-section.color-background :global(a.link--primary):hover {
-    background: rgba(255,255,255,0.1);
   }
 }

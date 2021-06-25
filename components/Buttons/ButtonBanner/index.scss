@@ -1,7 +1,3 @@
-:global(.cover.redish .button){
-  border: 1px solid #bc4e9c;
-}
-
 @media only screen and (max-width: 750px) {
   .button {
     appearance: none;
@@ -27,24 +23,25 @@
     white-space: nowrap;
     line-height: 0;
     box-shadow: 0 5px 10px rgba(0,0,0,0.12);
-  }
-  .button.primary {
-    color: #fff;
-    background: #007aff;
-  }
-  .button.secondary {
-    border: 1px solid #fff;
-    background: #fff;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
-  }
-  .button.terciary {
-    color: #4b87ef;
-    background: #fff;
-    border: 1px solid #007aff;
-  }
-  .button.success {
-    color: #fff;
-    background: #38b775;
+
+    &.primary {
+      color: #fff;
+      background: #007aff;
+    }
+    &.secondary {
+      border: 1px solid #fff;
+      background: #fff;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+    }
+    &.terciary {
+      color: #4b87ef;
+      background: #fff;
+      border: 1px solid #007aff;
+    }
+    &.success {
+      color: #fff;
+      background: #38b775;
+    }
   }
 }
 
@@ -73,35 +70,38 @@
     white-space: nowrap;
     line-height: 0;
     box-shadow: 0 5px 10px rgba(0,0,0,0.12);
-  }
-  .button:hover {
-    box-shadow: 0 7px 20px rgba(0,0,0,0.16);
-    transform: translateY(-1px);
-  }
-  .button.primary {
-    color: #fff;
-    background: #007aff;
-  }
-  .button.secondary {
-    border: 1px solid #fff;
-    background: #fff;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
-  }
-  .button.secondary:hover {
-    box-shadow: 0 7px 20px rgba(0,0,0,0.12);
-  }
-  .button.terciary {
-    color: #4b87ef;
-    background: #fff;
-    border: 1px solid #007aff;
-  }
-  .button.terciary:hover {
-    background: #007aff;
-    color: #fff;
-    transform: translateY(-1px);
-  }
-  .button.success {
-    color: #fff;
-    background: #38b775;
+
+    &:hover {
+      box-shadow: 0 7px 20px rgba(0,0,0,0.16);
+      transform: translateY(-1px);
+    }
+    &.primary {
+      color: #fff;
+      background: #007aff;
+    }
+    &.secondary {
+      border: 1px solid #fff;
+      background: #fff;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+      
+      &:hover {
+        box-shadow: 0 7px 20px rgba(0,0,0,0.12);
+      }
+    }
+    &.terciary {
+      color: #4b87ef;
+      background: #fff;
+      border: 1px solid #007aff;
+
+      &:hover {
+        background: #007aff;
+        color: #fff;
+        transform: translateY(-1px);
+      }
+    }
+    &.success {
+      color: #fff;
+      background: #38b775;
+    }
   }
 }

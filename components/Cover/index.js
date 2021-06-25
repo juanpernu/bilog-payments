@@ -1,8 +1,7 @@
 import React from 'react';
 import Container from './Container';
-import PropTypes from 'prop-types';
 
-const Cover = ({ gradientBg, position, text, paragraph, coverVideo }) => {
+const Cover = ({ gradientBg = "default", position, text, paragraph, coverVideo }) => {
 
   const video = coverVideo ? 'video' : " ";
 
@@ -30,14 +29,6 @@ const Cover = ({ gradientBg, position, text, paragraph, coverVideo }) => {
       </div>
     </section>
   )
-}
-
-Cover.propTypes = {
-  gradientBg: PropTypes.string,
-}
-
-Cover.defaultProps = {
-  gradientBg: "default",
 }
 
 export default Cover;

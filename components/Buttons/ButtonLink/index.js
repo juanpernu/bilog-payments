@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import PropTypes from 'prop-types';
 import { ButtonBanner } from '../../Buttons';
 
 const ButtonLink = ({ buttonText, hrefAs, customClass, buttonHref, fullWidth }) => (
@@ -11,13 +10,5 @@ const ButtonLink = ({ buttonText, hrefAs, customClass, buttonHref, fullWidth }) 
     </Link>
   </span>
 )
-
-ButtonLink.propTypes = {
-  buttonHref: PropTypes.string,
-}
-
-ButtonLink.defaultProps = {
-  buttonHref: '#',
-}
 
 export default ButtonLink;

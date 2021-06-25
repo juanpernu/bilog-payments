@@ -1,74 +1,83 @@
 @import './Container/index.scss';
+@import './Title/index.scss';
 
 .cover {
   height: 100%;
   background: linear-gradient(to right,#4C7ABD,#2F3F94);
-}
-.cover-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-.cover.default {
-  background: linear-gradient(to right,#4C7ABD,#2F3F94);
-}
-.cover.redish {
-  background: linear-gradient(to right, #f80759, #bc4e9c);
-}
-.cover.sea {
-  background: radial-gradient(ellipse farthest-side at 100% 100%,#dbf6c8 5%,#1cafc6 50%,#012690 110%);
-}
-.cover.violet {
-  background: linear-gradient(to right, #8f94fb, #4e54c8);
-}
-.cover.green {
-  background: linear-gradient(to right bottom,#58c1d2,#2288a2);
-}
-.cover.blue {
-  background: linear-gradient(to right,#07c0f8,#005aff);
-}
-.container-video{
-  height:350px;
-}
-.cover-video{
-  width:85%;
-  position:relative;
-  margin-left:auto;
-  margin-right:auto;
-}
-.cover-video::after{
-  content:'';
-  display:block;
-  width:100%;
-  padding-bottom: 10%; 
-}
-.video{
-  display:block;
-  margin: 0px auto;
-  height:90%;
-}
 
-@media only screen and (max-width: 750px) {
+  &.default {
+    background: linear-gradient(to right,#4C7ABD,#2F3F94);
+  }
+  &.redish {
+    background: linear-gradient(to right, #f80759, #bc4e9c);
+  }
+  &.sea {
+    background: radial-gradient(ellipse farthest-side at 100% 100%,#dbf6c8 5%,#1cafc6 50%,#012690 110%);
+  }
+  &.violet {
+    background: linear-gradient(to right, #8f94fb, #4e54c8);
+  }
+  &.green {
+    background: linear-gradient(to right bottom,#58c1d2,#2288a2);
+  }
+  &.blue {
+    background: linear-gradient(to right,#07c0f8,#005aff);
+  }
+
   .cover-wrapper {
     display: flex;
     flex-direction: column;
+
+    &.video{
+      display:block;
+      margin: 0px auto;
+      height:90%;
+    }
   }
-  .cover.default {
-    background: linear-gradient(to right,#4C7ABD,#2F3F94);
+}
+.container-video{
+  height:350px;
+
+  .video{
+    width:85%;
+    position:relative;
+    margin-left:auto;
+    margin-right:auto;
+  
+    &::after{
+      content:'';
+      display:block;
+      width:100%;
+      padding-bottom: 10%; 
+    }
   }
-  .cover.redish {
-    background: linear-gradient(to right, #f80759, #bc4e9c);
-  }
-  .cover.sea {
-    background: radial-gradient(ellipse farthest-side at 100% 100%,#dbf6c8 5%,#1cafc6 50%,#012690 110%);
-  }
-  .cover.violet {
-    background: linear-gradient(to right, #8f94fb, #4e54c8);
-  }
-  .cover.green {
-    background: linear-gradient(to right bottom,#58c1d2,#2288a2);
-  }
-  .cover.blue {
-    background: linear-gradient(to right,#07c0f8,#005aff);
+}
+
+@media only screen and (max-width: 750px) {
+  .cover {
+    &.default {
+      background: linear-gradient(to right,#4C7ABD,#2F3F94);
+    }
+    &.redish {
+      background: linear-gradient(to right, #f80759, #bc4e9c);
+    }
+    &.sea {
+      background: radial-gradient(ellipse farthest-side at 100% 100%,#dbf6c8 5%,#1cafc6 50%,#012690 110%);
+    }
+    &.violet {
+      background: linear-gradient(to right, #8f94fb, #4e54c8);
+    }
+    &.green {
+      background: linear-gradient(to right bottom,#58c1d2,#2288a2);
+    }
+    &.blue {
+      background: linear-gradient(to right,#07c0f8,#005aff);
+    }
+    
+    .cover-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
 
@@ -78,100 +87,100 @@
     display: flex;
     flex-direction: row;
     margin:0 auto;
+
+    &.video{
+      padding: 5px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
   }
-  .cover-wrapper .video{
-    padding: 5px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-  }
-  .cover.no-padding {
-    padding-top: 0;
-  }
-  .cover.default {
-    background: url('/static/illus-home-bg.png'), linear-gradient(to right, #4C7ABD, #2E4194);
-    background-size: cover;
-  }
-  .cover.redish {
-    background: url('/static/illus-aud-bg.png'), linear-gradient(to right, #f80759, #bc4e9c);
-    background-size: cover;
-  }
-  .cover.sea {
-    background: radial-gradient(ellipse farthest-side at 100% 100%,#dbf6c8 5%,#1cafc6 50%,#012690 110%);
-  }
-  .cover.violet {
-    background: url('/static/illus-labo-bg.png'), linear-gradient(to right, #8f94fb, #4e54c8);
-    background-size: cover;
-  }
-  .cover.green {
-    background: linear-gradient(to right bottom,#58c1d2,#2288a2);
-  }
-  .cover.blue {
-    background: linear-gradient(to right,#07c0f8,#005aff);
+  .cover {
+    &.no-padding {
+      padding-top: 0;
+    }
+    &.default {
+      background: url('/static/illus-home-bg.png'), linear-gradient(to right, #4C7ABD, #2E4194);
+      background-size: cover;
+    }
+    &.redish {
+      background: url('/static/illus-aud-bg.png'), linear-gradient(to right, #f80759, #bc4e9c);
+      background-size: cover;
+    }
+    &.sea {
+      background: radial-gradient(ellipse farthest-side at 100% 100%,#dbf6c8 5%,#1cafc6 50%,#012690 110%);
+    }
+    &.violet {
+      background: url('/static/illus-labo-bg.png'), linear-gradient(to right, #8f94fb, #4e54c8);
+      background-size: cover;
+    }
+    &.green {
+      background: linear-gradient(to right bottom,#58c1d2,#2288a2);
+    }
+    &.blue {
+      background: linear-gradient(to right,#07c0f8,#005aff);
+    }
   }
   .container-video {
     height:490px;
     padding-bottom: 50px;
-  }
-  .video{
-    width:100%;
-    height:100%;
-    display:block;
+
+    .video{
+      width:100%;
+      height:100%;
+      display:block;
+    }
   }
 }
 
 @media only screen and (min-width: 1201px) {
   .cover-wrapper {
-    max-width: 1024px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 55% 50%;
-    grid-column-gap: 10%;
-  }
-  .cover-wrapper .video{
-    max-width: 1240px;
-    padding: 15px 5px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-  }
-  .cover-wrapper {
     max-width: 800px;
     display: flex;
     flex-direction: row;
     margin:0 auto;
+    
+    &.video{
+      max-width: 1240px;
+      padding: 15px 5px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
   }
-  .cover.no-padding {
-    padding-top: 0;
-  }
-  .cover.default {
-    background: url('/static/illus-home-bg.png'), linear-gradient(to right, #4C7ABD, #2E4194);
-    background-size: cover;
-  }
-  .cover.redish {
-    background: url('/static/illus-aud-bg.png'), linear-gradient(to right, #f80759, #bc4e9c);
-    background-size: cover;
-  }
-  .cover.sea {
-    background: radial-gradient(ellipse farthest-side at 100% 100%,#dbf6c8 5%,#1cafc6 50%,#012690 110%);
-  }
-  .cover.violet {
-    background: url('/static/illus-labo-bg.png'), linear-gradient(to right, #8f94fb, #4e54c8);
-    background-size: cover;
-  }
-  .cover.green {
-    background: linear-gradient(to right bottom,#58c1d2,#2288a2);
-  }
-  .cover.blue {
-    background: linear-gradient(to right,#07c0f8,#005aff);
+  .cover {
+    &.no-padding {
+      padding-top: 0;
+    }
+    &.default {
+      background: url('/static/illus-home-bg.png'), linear-gradient(to right, #4C7ABD, #2E4194);
+      background-size: cover;
+    }
+    &.redish {
+      background: url('/static/illus-aud-bg.png'), linear-gradient(to right, #f80759, #bc4e9c);
+      background-size: cover;
+    }
+    &.sea {
+      background: radial-gradient(ellipse farthest-side at 100% 100%,#dbf6c8 5%,#1cafc6 50%,#012690 110%);
+    }
+    &.violet {
+      background: url('/static/illus-labo-bg.png'), linear-gradient(to right, #8f94fb, #4e54c8);
+      background-size: cover;
+    }
+    &.green {
+      background: linear-gradient(to right bottom,#58c1d2,#2288a2);
+    }
+    &.blue {
+      background: linear-gradient(to right,#07c0f8,#005aff);
+    }
   }
   .container-video {
     height:490px;
     padding-bottom: 50px;
-  }
-  .video{
-    width:100%;
-    height:100%;
-    display:block;
+    
+    .video{
+      height:100%;
+      display:block;
+    }
   }
 }

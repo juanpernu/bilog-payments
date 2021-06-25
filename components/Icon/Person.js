@@ -1,7 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
 
-const Person = ({ width, height, colorStroke, colorFill }) => (
+const Person = ({ width = 36, height = 36, colorStroke = '#FFF', colorFill = '#067df7' }) => (
   <svg width={width} height={height} viewBox="0 0 24 24">
     <path
       fill={colorFill}
@@ -91,19 +90,5 @@ const Person = ({ width, height, colorStroke, colorFill }) => (
       `} />
   </svg>
 );
-
-Person.propTypes = {
-  width: PropTypes.number,
-  height: PropTypes.number,
-  colorStroke: PropTypes.string,
-  colorFill: PropTypes.string,
-};
-
-Person.defaultProps = {
-  width: 36,
-  height: 36,
-  colorStroke: '#FFF',
-  colorFill: '#067df7',
-};
 
 export default Person;
