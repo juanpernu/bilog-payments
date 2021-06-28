@@ -1,0 +1,31 @@
+@media only screen and (max-width: 750px) {
+  .feature-item {
+    &--title {
+      font-size: 18px;
+      margin: 10px 0 10px;
+      padding: 0;
+      font-weight: 600;
+    }
+    &--description {
+      font-size: 14px;
+      line-height: 25px;
+      margin: 0 0 24px;
+      padding: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 751px) {
+  .feature-item {
+    margin: 0 20px;
+    text-align: left;
+    max-width: 400px;
+    
+    &--title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 16px;
+      margin-bottom: 13px;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import Button from '../Button';
+import { Button } from '../../Buttons';
 
 const Payments = () => {
   return (
@@ -6,7 +6,7 @@ const Payments = () => {
       <form id="payments" className="payments-form">
         <div className="block">
           <label>Email</label>
-          <input className="checkout-input input"/>
+          <input className="checkout-input input" />
         </div>
         <div className="block">
           <label>Información de la tarjeta</label>
@@ -27,7 +27,7 @@ const Payments = () => {
         </div>
         <div className="block">
           <label>Nombre en la tarjeta</label>
-          <input className="checkout-input input"/>
+          <input className="checkout-input input" />
         </div>
         <div className="block">
           <label>Datos de facturación</label>

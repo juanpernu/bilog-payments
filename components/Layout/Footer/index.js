@@ -1,18 +1,17 @@
+import FooterWrapper from './FooterWrapper';
+import Column from '../../Column';
+import { footer } from '../../../mocks/footerContent';
+const { versions, support, contact, socialMedia } = footer;
+
 const Footer = () => (
   <footer className="footer light">
     <div className="footer--links">
+      <Column title="Sistemas" items={versions} />
+      <Column title="Compañía" items={contact} />
+      <Column title="Soporte" items={support} />
+      <Column title="Social Media" items={socialMedia} />
     </div>
-    <div className="wrapper">
-      <div className="wrapper--text">
-        <img className="logo" src="/static/logo-bilog.svg" alt="Bilog" />
-      </div>
-      <div className="wrapper--text">
-        <p className="copyright">
-          Copyright © {new Date().getFullYear()} Bilog, Inc. All rights
-          reserved.
-        </p>
-      </div>
-    </div>
+    <FooterWrapper />
   </footer>
 );
 
