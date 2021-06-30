@@ -1,8 +1,8 @@
-import React, { createContext, useState } from 'react';
-import { ProductCardsContent } from '../../content/home';
+import React, { createContext, useState } from "react";
+import { ProductCardsContent } from "../../content/home";
 
 export const Context = createContext();
-Context.displayName = 'UserContext';
+Context.displayName = "UserContext";
 
 export default ({ children }) => {
   const [state, setState] = useState(ProductCardsContent);

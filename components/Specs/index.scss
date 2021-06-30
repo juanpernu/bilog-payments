@@ -1,0 +1,79 @@
+$box-shadow: 0 50px 100px -20px rgb(50 50 93 / 25%),
+  0 30px 60px -30px rgb(0 0 0 / 30%);
+$border-radius: 8px;
+
+.specs-container {
+  width: 1200px;
+  padding: 50px 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 40px;
+
+  .copy {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #666;
+  }
+
+  .specs {
+    &-details {
+      ul {
+        list-style: none;
+        padding: 0;
+        li {
+          font-size: 16px;
+          display: flex;
+          margin-bottom: 8px;
+
+          &:before {
+            content: "";
+            display: inline-block;
+            margin-right: 18px;
+            width: 24px;
+            height: 24px;
+            background-image: url("https://asociarmeaosde.com.ar/check.8caedbc5f5bcc9d9e1b8.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            -ms-flex-positive: 0;
+            flex-grow: 0;
+            -ms-flex-negative: 0;
+            flex-shrink: 0;
+          }
+        }
+      }
+    }
+
+    &-price {
+      overflow: hidden;
+      padding: 30px;
+      box-shadow: $box-shadow;
+      border-radius: $border-radius;
+
+      .price-wrapper {
+        margin-bottom: 20px;
+
+        &:last-of-type {
+          margin: 0;
+        }
+        .price-value {
+          font-size: 25px;
+          font-weight: 600;
+          margin: 0;
+          color: #666;
+
+          &.total {
+            font-size: 40px;
+            color: #00d4ff;
+          }
+
+          .decimals {
+            font-size: 25px;
+            font-weight: 100;
+            color: #bbb;
+          }
+        }
+      }
+    }
+  }
+}
