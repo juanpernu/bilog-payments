@@ -1,11 +1,13 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
+import Value from "./value";
 import Video from "../Video";
 import Icon from "../Icon";
 import Button from "../Button";
-import Value from "./value";
+import Modal from "../Modal";
 
 const Specs = ({ specs, id }) => {
   const { chars, price, video } = specs;
+  const [showModal, setShowModal] = useState(false);
   return (
     <div className="specs-container">
       <div className="specs-details">
@@ -16,8 +18,8 @@ const Specs = ({ specs, id }) => {
           <h3 className="subtitle">Todas las versiones incluyen...</h3>
         )}
         <ul>
-          {chars.map((c) => (
-            <li>
+          {chars.map((c, i) => (
+            <li key={i}>
               <Icon className="list-icon" type="check" /> {c}
             </li>
           ))}
@@ -47,13 +49,22 @@ const Specs = ({ specs, id }) => {
                 Mirá el video de la demostración y descubrí por qué somos la
                 mejor opción para tu clínica o consultorio.
               </p>
-              <Button onClick={() => console.log("click")}>
+              <Button onClick={() => setShowModal(true)}>
                 <span className="video-button">
                   <p>Ver video</p>
                   <Icon type="video" colorFill="#fff" />
                 </span>
               </Button>
             </div>
+            <Modal
+              title="Video demostración"
+              isOpenModal={showModal}
+              closeModal={() => setShowModal(false)}
+              openModal={() => setShowModal(true)}
+              strech
+            >
+              <Video url={video} id={id} />
+            </Modal>
           </Fragment>
         ) : (
           <Video url={video} id={id} />

@@ -3,12 +3,14 @@ import BackArrow from "./back-arrow";
 import Tooltip from "./tooltip";
 import Check from "./check";
 import Video from "./video";
+import Close from "./close";
 
 const icons = {
   back: BackArrow,
   tooltip: Tooltip,
   check: Check,
   video: Video,
+  close: Close,
 };
 
 const GeneratedIcon = ({

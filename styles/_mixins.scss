@@ -1,0 +1,12 @@
+@import "./variables";
+
+@mixin translateIn-mixin($x, $fromY, $toY) {
+  @keyframes translateIn {
+    0% {
+      transform: translate($x, $fromY);
+    }
+    to {
+      transform: translate($x, $toY);
+    }
+  }
+}
