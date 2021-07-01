@@ -9,9 +9,9 @@ const Standard = {
     ],
     price: {
       value: {
-        initial: 7000,
-        simple: 2550,
-        complex: 3525,
+        initial: "7.000",
+        simple: "2.550",
+        complex: "3.525",
       },
     },
     video: "https://www.youtube.com/embed/-k0AR8PpKF8",

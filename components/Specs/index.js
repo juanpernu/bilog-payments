@@ -1,9 +1,11 @@
 import { Fragment } from "react";
 import Video from "../Video";
+import Icon from "../Icon";
+import Button from "../Button";
 import Value from "./value";
 
-const Specs = ({ specs }) => {
-  const { id, chars, price, video } = specs;
+const Specs = ({ specs, id }) => {
+  const { chars, price, video } = specs;
   return (
     <div className="specs-container">
       <div className="specs-details">
@@ -15,7 +17,9 @@ const Specs = ({ specs }) => {
         )}
         <ul>
           {chars.map((c) => (
-            <li>{c}</li>
+            <li>
+              <Icon className="list-icon" type="check" /> {c}
+            </li>
           ))}
         </ul>
       </div>
@@ -24,23 +28,32 @@ const Specs = ({ specs }) => {
           <Fragment>
             <div className="detached-prices">
               <Value
-                text="Pago inicial"
+                text="Tarifa de instalación"
                 price={price.value.initial}
-                tooltipText="El pago inicial contempla la instalación y puesta en marcha del servicio."
+                tooltipText="Un pago de única vez que contempla la instalación y puesta en marcha del servicio."
                 tooltip
               />
               <Value
                 text="Suscripción mensual"
+                className={id}
                 price={price.value.simple}
                 tooltipText="Valor mensual de la suscripción al servicio."
                 tooltip
               />
             </div>
-            <Value
-              text="Valor total"
-              className="total"
-              price={price.value.initial + price.value.simple}
-            />
+            <div className="video">
+              <h3 className="video-title">¿Todavia tenés dudas?</h3>
+              <p className="video-text">
+                Mirá el video de la demostración y descubrí por qué somos la
+                mejor opción para tu clínica o consultorio.
+              </p>
+              <Button onClick={() => console.log("click")}>
+                <span className="video-button">
+                  <p>Ver video</p>
+                  <Icon type="video" colorFill="#fff" />
+                </span>
+              </Button>
+            </div>
           </Fragment>
         ) : (
           <Video url={video} id={id} />

@@ -1,6 +1,4 @@
-$box-shadow: 0 50px 100px -20px rgb(50 50 93 / 25%),
-  0 30px 60px -30px rgb(0 0 0 / 30%);
-$border-radius: 8px;
+@import "../../styles/variables";
 
 .specs-container {
   width: 1200px;
@@ -8,10 +6,10 @@ $border-radius: 8px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 40px;
+  grid-column-gap: 80px;
 
   .copy {
-    font-size: 12px;
+    font-size: $copy-fs;
     text-transform: uppercase;
     color: #666;
   }
@@ -22,23 +20,18 @@ $border-radius: 8px;
         list-style: none;
         padding: 0;
         li {
-          font-size: 16px;
+          font-size: $p-fs;
           display: flex;
-          margin-bottom: 8px;
+          margin-bottom: 11px;
+          line-height: 28px;
 
-          &:before {
-            content: "";
+          .list-icon {
             display: inline-block;
-            margin-right: 18px;
-            width: 24px;
-            height: 24px;
-            background-image: url("https://asociarmeaosde.com.ar/check.8caedbc5f5bcc9d9e1b8.svg");
-            background-repeat: no-repeat;
-            background-size: contain;
-            -ms-flex-positive: 0;
+            margin: 3px 18px 0 0;
             flex-grow: 0;
-            -ms-flex-negative: 0;
             flex-shrink: 0;
+            -ms-flex-positive: 0;
+            -ms-flex-negative: 0;
           }
         }
       }
@@ -50,18 +43,20 @@ $border-radius: 8px;
       border-radius: $border-radius;
 
       .detached-prices {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
       }
 
       .price-wrapper {
-        margin-bottom: 20px;
+        margin: 0 30px 20px 0;
+        padding-right: 30px;
+        border-right: 2px solid #ddd;
 
         &:last-of-type {
           margin: 0;
+          border: none;
         }
         .price-value {
-          font-size: 25px;
+          font-size: 35px;
           font-weight: 600;
           margin: 0;
           color: #666;
@@ -72,7 +67,6 @@ $border-radius: 8px;
             display: inline-block;
             position: relative;
             cursor: pointer;
-            top: 3px;
 
             &:hover .tooltip-text {
               opacity: 1;
@@ -101,9 +95,20 @@ $border-radius: 8px;
             }
           }
 
-          &.total {
-            font-size: 40px;
-            color: #00d4ff;
+          .small {
+            color: $small;
+          }
+
+          .smallpremium {
+            color: $smallpremium;
+          }
+
+          .standard {
+            color: $standard;
+          }
+
+          .full {
+            color: $full;
           }
 
           .decimals {
@@ -111,6 +116,28 @@ $border-radius: 8px;
             font-weight: 100;
             color: #bbb;
           }
+        }
+      }
+
+      .video {
+        margin-top: 20px;
+        &-title {
+          font-weight: 500;
+          font-size: $h3-fs;
+          margin: 8px 0;
+          color: $bilog-blue;
+        }
+
+        &-text {
+          font-weight: 400;
+          font-size: $p-fs;
+          line-height: 28px;
+          margin: 0;
+          color: #666;
+        }
+
+        &-button {
+          display: flex;
         }
       }
     }

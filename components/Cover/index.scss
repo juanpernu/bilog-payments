@@ -1,31 +1,27 @@
-$cover-default: #414042;
-$cover-small: #44ace1;
-$cover-smallpremium: #3c5daa;
-$cover-standard: #4e72b8;
-$cover-full: #2c3689;
+@import "../../styles/variables";
 
 .cover {
   width: 100%;
   color: #fff;
 
   &.default {
-    background-color: $cover-default;
+    background-color: $default;
   }
 
   &.small {
-    background-color: $cover-small;
+    background-color: $small;
   }
 
   &.smallpremium {
-    background-color: $cover-smallpremium;
+    background-color: $smallpremium;
   }
 
   &.standard {
-    background-color: $cover-standard;
+    background-color: $standard;
   }
 
   &.full {
-    background-color: $cover-full;
+    background-color: $full;
   }
 
   &-container {

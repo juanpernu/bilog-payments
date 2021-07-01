@@ -1,10 +1,14 @@
 import React from "react";
 import BackArrow from "./back-arrow";
 import Tooltip from "./tooltip";
+import Check from "./check";
+import Video from "./video";
 
 const icons = {
   back: BackArrow,
   tooltip: Tooltip,
+  check: Check,
+  video: Video,
 };
 
 const GeneratedIcon = ({

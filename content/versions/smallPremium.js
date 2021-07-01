@@ -9,9 +9,9 @@ const SmallPremium = {
     ],
     price: {
       value: {
-        initial: 4000,
-        simple: 1950,
-        complex: 2550,
+        initial: "4.000",
+        simple: "1.950",
+        complex: "2.550",
       },
     },
     video: "https://www.youtube.com/embed/-k0AR8PpKF8",

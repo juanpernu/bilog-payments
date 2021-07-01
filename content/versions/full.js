@@ -9,9 +9,9 @@ const Full = {
     ],
     price: {
       value: {
-        initial: 9000,
-        simple: 5250,
-        complex: 7200,
+        initial: "9.000",
+        simple: "5.250",
+        complex: "7.200",
       },
     },
     video: "https://www.youtube.com/embed/-k0AR8PpKF8",
