@@ -1,0 +1,38 @@
+@import '../../Stats/index.scss';
+@import '../../../../../styles/variables';
+
+@media only screen and (max-width: 750px) {
+  .step {
+    &-container {
+      background-color: $bilog-blue;
+      border-radius: $bilog-border-radius-5;
+      margin: 5px 10px;
+      padding-top: 5px;
+    }
+    &-fields {
+      padding: 0 10px;
+
+      p {
+        color: $bilog-white;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 751px) {
+  .step {
+    &-container {
+      background-color: $bilog-blue;
+      border-radius: 0 0 5px 5px;
+      margin: 0 20%;
+      padding-top: 5px;
+    }
+    &-fields {
+      padding: 0 20px;
+
+      p {
+        color: $bilog-white;
+      }
+    }
+  }
+}

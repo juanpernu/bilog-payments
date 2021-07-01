@@ -9,9 +9,8 @@ function Wizard() {
         const stepNumber = i + 1;
         return (
           <Step
-            question={step.question}
-            field={step.field}
-            step={stepNumber}
+            step={step}
+            stepNumber={stepNumber}
             totalSteps={totalSteps}
           />
         );

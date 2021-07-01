@@ -1,0 +1,55 @@
+// Bilog colors
+$bilog-blue: #007aff;
+$bilog-blue-light: #4b87ef;
+$bilog-black: #000;
+$bilog-gray: #999;
+$bilog-gray-light: #ddd;
+$bilog-white: #fff;
+$bilog-red: #f80a5a;
+$bilog-green: #00a650;
+
+$bg-color-white: $bilog-white;
+
+// Shadows
+$bilog-shadow: rgba(0,0,0,0.12);
+$bilog-shadow-raised: rgba(0,0,0,0.16);
+
+// Screen sizes
+$screen-mobile: 480px;
+$screen-tablet: 681px;
+$screen-desktop: 1024px;
+
+// Font styles
+$bilog-font-family: 'Nunito',sans-serif;
+$font-size-12: 12px;
+$font-size-14: 14px;
+$font-size-16: 16px;
+$font-size-20: 20px;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-bold: 600;
+
+// Spacing styles
+$bilog-spacing-32: 32px;
+$bilog-spacing-24: 24px;
+$bilog-spacing-16: 16px;
+$bilog-spacing-8: 8px;
+
+// Border styles
+$bilog-border-radius-6: 6px;
+$bilog-border-radius-5: 5px;
+
+// Text styles
+$title-color: $bilog-black;
+$title-fw: $fw-bold;
+$title-fs: $font-size-20;
+
+$subtitle-color: $bilog-gray;
+$subtitle-fw: $fw-regular;
+$subtitle-fs: $font-size-16;
+
+$text-color: $bilog-black;
+$text-fw: $fw-regular;
+$text-fs: $font-size-14;
+
+$copy-fs: $font-size-12;
