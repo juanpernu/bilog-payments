@@ -8,8 +8,8 @@ const SmallPremium = {
       "Manejá y administrá todos los turnos de tu consultorio con la agenda de turnos diarias.",
     ],
     price: {
-      initial: 4000,
-      month: {
+      value: {
+        initial: 4000,
         simple: 1950,
         complex: 2550,
       },

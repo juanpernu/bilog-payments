@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const devBaseUrl = "http://localhost:3000/";
+const devBaseUrl = "https://bilog-payments-juanpernu.vercel.app/";
 
 export const setBaseUrl = setBaseUrlFn.bind(null);
 

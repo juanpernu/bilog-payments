@@ -22,12 +22,24 @@ const Specs = ({ specs }) => {
       <div className="specs-price">
         {price ? (
           <Fragment>
-            <Value text="Pago inicial" price={price.initial} />
-            <Value text="Suscripción mensual" price={price.month.simple} />
+            <div className="detached-prices">
+              <Value
+                text="Pago inicial"
+                price={price.value.initial}
+                tooltipText="El pago inicial contempla la instalación y puesta en marcha del servicio."
+                tooltip
+              />
+              <Value
+                text="Suscripción mensual"
+                price={price.value.simple}
+                tooltipText="Valor mensual de la suscripción al servicio."
+                tooltip
+              />
+            </div>
             <Value
-              text="Total"
+              text="Valor total"
               className="total"
-              price={price.initial + price.month.simple}
+              price={price.value.initial + price.value.simple}
             />
           </Fragment>
         ) : (

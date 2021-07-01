@@ -9,7 +9,7 @@ const Versions = ({ content }) => {
   const { title, id, specs } = content;
   return (
     <section className="versions-page">
-      <Cover>
+      <Cover template={id}>
         <Plans plan={title} />
       </Cover>
       <Specs id={id} specs={specs} />

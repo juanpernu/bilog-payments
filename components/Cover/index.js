@@ -1,8 +1,8 @@
 import React from "react";
 
-const Cover = ({ children }) => {
+const Cover = ({ children, template }) => {
   return (
-    <section className="cover">
+    <section className={`cover ${template}`}>
       <div className="cover-container">{children}</div>
     </section>
   );

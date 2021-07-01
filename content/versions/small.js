@@ -8,8 +8,8 @@ const Small = {
       "Manejá y administrá todos los turnos de tu consultorio con la agenda de turnos diarias.",
     ],
     price: {
-      initial: 3000,
-      month: {
+      value: {
+        initial: 3000,
         simple: 1500,
         complex: 2100,
       },

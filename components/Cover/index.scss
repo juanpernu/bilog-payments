@@ -1,7 +1,32 @@
+$cover-default: #414042;
+$cover-small: #44ace1;
+$cover-smallpremium: #3c5daa;
+$cover-standard: #4e72b8;
+$cover-full: #2c3689;
+
 .cover {
   width: 100%;
-  background-color: #44ace1;
   color: #fff;
+
+  &.default {
+    background-color: $cover-default;
+  }
+
+  &.small {
+    background-color: $cover-small;
+  }
+
+  &.smallpremium {
+    background-color: $cover-smallpremium;
+  }
+
+  &.standard {
+    background-color: $cover-standard;
+  }
+
+  &.full {
+    background-color: $cover-full;
+  }
 
   &-container {
     padding: 80px 0 80px;
