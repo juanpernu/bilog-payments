@@ -3,7 +3,7 @@ const Steps = [
     {
       question: "Cual es la cantidad de profesionales que tiene su empresa?",
       field: "numeric",
-      key: "prof_number",
+      key: "prof_count_number",
     },
     {
       question:

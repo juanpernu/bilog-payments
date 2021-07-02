@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import StepWizard from "react-step-wizard";
 import { Steps, Step } from "./Steps";
+import { savePrice } from "../../../services/pricingService";
 
 function Wizard() {
   const totalSteps = Steps.length;
@@ -11,7 +12,7 @@ function Wizard() {
       [key]: value,
     });
 
-  const submit = () => console.log(userdata);
+  const submit = () => savePrice(userdata);
 
   return (
     <StepWizard>
