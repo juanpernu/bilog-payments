@@ -4,6 +4,7 @@ import Tooltip from "./tooltip";
 import Check from "./check";
 import Video from "./video";
 import Close from "./close";
+import Control from "./control";
 
 const icons = {
   back: BackArrow,
@@ -11,6 +12,7 @@ const icons = {
   check: Check,
   video: Video,
   close: Close,
+  control: Control,
 };
 
 const GeneratedIcon = ({

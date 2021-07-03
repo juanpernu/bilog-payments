@@ -1,0 +1,60 @@
+@import "../../styles/variables";
+
+.addon {
+  background-color: #fff;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+  padding: 40px;
+
+  &-container {
+    display: flex;
+    .icon {
+      margin-right: 10px;
+    }
+    .title {
+      font-weight: 600;
+      line-height: 28px;
+      color: $bilog-blue;
+      font-size: 21px;
+      line-height: 32px;
+      text-transform: uppercase;
+    }
+  }
+
+  &-description {
+    margin: 8px 0;
+    font-weight: 400;
+    font-size: $h3-fs;
+    line-height: 28px;
+    color: #525f7f;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: row;
+
+    .pricing-container {
+      padding: 16px 0 16px 28px;
+      margin: 0 0 0 20px;
+      width: 230px;
+      border-left: 1px solid #eee;
+      flex: content;
+      flex-direction: column;
+
+      p {
+        margin: 0;
+      }
+
+      .annotation {
+        font-size: 24px;
+        color: #24b47e;
+        display: block;
+        position: relative;
+      }
+    }
+  }
+
+  & + .addon {
+    margin: 22px 0 0;
+  }
+}
