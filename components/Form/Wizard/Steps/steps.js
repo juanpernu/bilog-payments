@@ -5,6 +5,10 @@ const Steps = [
       field: "numeric",
     },
     {
+      question: "En cuántas computadoras utilizará el software?",
+      field: "numeric",
+    },
+    {
       question: "Trabajas con profesionales y necesitas realizar la liquidación?",
       field: "checkbox",
     },
@@ -15,15 +19,15 @@ const Steps = [
   ],
   [
     {
-      question: "Precisa un Módulo Auditoría",
+      question: "Precisa un Módulo Auditoría?",
       field: "checkbox",
     },
     {
-      question: "Precisa un Módulo Administración",
+      question: "Precisa un Módulo Administración?",
       field: "checkbox",
     },
     {
-      question: "Precisa un Módulo OSDE",
+      question: "Precisa un Módulo OSDE?",
       field: "checkbox",
     }
   ],
@@ -38,11 +42,11 @@ const Steps = [
     },
     {
       question: "También su numero de Telefono:",
-      field: "text",
+      field: "numeric",
     },
     {
       question: "Cual es su profesión?",
-      field: "text",
+      field: "dropdown",
     }
   ]
 ];
