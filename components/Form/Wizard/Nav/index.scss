@@ -1,0 +1,61 @@
+@import '../../../../styles/variables';
+
+@media only screen and (max-width: 750px) {
+  .nav {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    max-width: 200px;
+    margin: 20px auto;
+    align-self: center;
+
+    .dot {
+      color: $bilog-black;
+      cursor: pointer;
+      font-size: 36px;
+      line-height: 1;
+      margin: 0 15px;
+      opacity: .4;
+      text-shadow: none;
+      transition: opacity 1s ease,
+          text-shadow 1s ease;
+      will-change: opacity, text-shadow;
+    
+      &.active {
+        color: $bilog-blue-light;
+        opacity: 1;
+        text-shadow: 0 0px 8px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 751px) {
+  .nav {
+    padding: 50px 10px 20px 10px;
+    display: flex;
+    justify-content: center;
+    max-width: 200px;
+    margin: 0 auto;
+    align-self: center;
+
+    .dot {
+      color: $bilog-black;
+      cursor: pointer;
+      font-size: 36px;
+      line-height: 1;
+      margin: 0 15px;
+      opacity: .4;
+      text-shadow: none;
+      transition: opacity 1s ease,
+          text-shadow 1s ease;
+      will-change: opacity, text-shadow;
+    
+      &.active {
+        color: $bilog-blue-light;
+        opacity: 1;
+        text-shadow: 0 0px 8px;
+      }
+    }
+  }
+}

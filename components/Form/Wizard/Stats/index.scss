@@ -1,0 +1,19 @@
+@import '../../../../styles/variables';
+
+.step {
+  &-stats {
+    padding: 40px 10px;
+    display: flex;
+
+    button {
+      width: 200px;
+      color: $bilog-blue;
+      background-color: $bilog-white;
+      border-color: $bilog-blue;
+      font-family: $bilog-font-family;
+      font-size: $font-size-12;
+      font-weight: $fw-bold;
+      margin: 0 15px;
+    }
+  }
+}
