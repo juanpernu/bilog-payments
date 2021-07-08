@@ -1,20 +1,24 @@
 @import '../../Stats/index.scss';
 @import '../../../../../styles/variables';
 
+.step {
+  &-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    position: relative;
+    align-items: flex-start;
+  }
+}
+
 @media only screen and (max-width: 750px) {
   .step {
-    &-container {
-      background-color: $bilog-blue;
-      border-radius: $bilog-border-radius-5;
-      margin: 5px 10px;
-      padding-top: 5px;
-    }
     &-fields {
-      padding: 0 10px;
-
-      p {
-        color: $bilog-white;
-      }
+      padding: 0 30px;
+    }
+    &-question {
+      font-size: $font-size-22;
+      font-weight: $fw-bold;
     }
   }
 }
@@ -22,17 +26,18 @@
 @media only screen and (min-width: 751px) {
   .step {
     &-container {
-      background-color: $bilog-blue;
-      border-radius: 0 0 5px 5px;
-      margin: 0 20%;
-      padding-top: 5px;
+      max-width: 1200px;
     }
     &-fields {
       padding: 0 20px;
-
-      p {
-        color: $bilog-white;
-      }
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+    &-question {
+      margin-right: 20px;
+      font-size: $font-size-28;
+      font-weight: $fw-regular;
     }
   }
 }

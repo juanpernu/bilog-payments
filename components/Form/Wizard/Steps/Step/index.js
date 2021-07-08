@@ -8,7 +8,7 @@ const Step = (props) => {
       {step.map((stepItem, i) => {
         return (
           <div key={i} className="step-fields">
-            <p>{stepItem.question}</p>
+            <p className="step-question">{stepItem.question}</p>
             <AnswerField
               field={stepItem.field}
               fieldKey={stepItem.key}

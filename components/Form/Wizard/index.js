@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import StepWizard from "react-step-wizard";
 import { Steps, Step } from "./Steps";
+import Nav from "./Nav";
 import { savePrice } from "../../../services/pricingService";
 
 function Wizard() {
@@ -15,7 +16,7 @@ function Wizard() {
   const submit = () => savePrice(userdata);
 
   return (
-    <StepWizard>
+    <StepWizard nav={<Nav />}>
       {Steps.map((step, i) => {
         const stepNumber = i + 1;
         return (

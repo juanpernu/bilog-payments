@@ -6,6 +6,11 @@ const Steps = [
       key: "prof_count_number",
     },
     {
+      question: "En cuántas computadoras utilizará el software?",
+      field: "numeric",
+      key: "pc_count_number",
+    },
+    {
       question:
         "Trabajas con profesionales y necesitas realizar la liquidación?",
       field: "checkbox",
@@ -19,17 +24,17 @@ const Steps = [
   ],
   [
     {
-      question: "Precisa un Módulo Auditoría",
+      question: "Precisa un Módulo Auditoría?",
       field: "checkbox",
       key: "add_auditory",
     },
     {
-      question: "Precisa un Módulo Administración",
+      question: "Precisa un Módulo Administración?",
       field: "checkbox",
       key: "add_administration",
     },
     {
-      question: "Precisa un Módulo OSDE",
+      question: "Precisa un Módulo OSDE?",
       field: "checkbox",
       key: "add_osde",
     },

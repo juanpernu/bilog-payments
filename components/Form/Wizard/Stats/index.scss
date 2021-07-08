@@ -1,35 +1,19 @@
 @import '../../../../styles/variables';
 
-@media only screen and (max-width: 750px) {
-  .step {
-    &-stats {
-      padding: 5px 10px;
+.step {
+  &-stats {
+    padding: 40px 10px;
+    display: flex;
 
-      button {
-        color: $bilog-blue;
-        background-color: $bilog-white;
-        border-color: $bilog-blue;
-        font-family: $bilog-font-family;
-        font-size: $font-size-14;
-        font-weight: $fw-bold;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: 751px) {
-  .step {
-    &-stats {
-      padding: 5px 40% 5px 15px;
-
-      button {
-        color: $bilog-blue;
-        background-color: $bilog-white;
-        border-color: $bilog-blue;
-        font-family: $bilog-font-family;
-        font-size: $font-size-14;
-        font-weight: $fw-bold;
-      }
+    button {
+      width: 200px;
+      color: $bilog-blue;
+      background-color: $bilog-white;
+      border-color: $bilog-blue;
+      font-family: $bilog-font-family;
+      font-size: $font-size-12;
+      font-weight: $fw-bold;
+      margin: 0 15px;
     }
   }
 }
