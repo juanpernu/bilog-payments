@@ -23,16 +23,7 @@ export const getVersion = (pricing) => {
   if (prof_count_number > 1) versionId = "smallpremium";
   if (prof_count_number === 1) versionId = "small";
 
-  // TODO: When versions page is ready, we should
-  // get this from version contents
-  return {
-    id: "small",
-    price: {
-      initial: 9000,
-      simple: 5250,
-      complex: 7200,
-    },
-  };
+  return versionId;
 };
 
 export const formatPricing = (pricing) => {
@@ -50,8 +41,6 @@ export const formatPricing = (pricing) => {
     profession,
   } = pricing;
 
-  const { id, price } = getVersion(pricing);
-
   return {
     prof_count_number,
     pc_count_number,
@@ -62,8 +51,7 @@ export const formatPricing = (pricing) => {
       profession,
     },
     version: {
-      id,
-      price,
+      id: getVersion(pricing),
       addons: {
         add_administration,
         add_auditory,
