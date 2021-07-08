@@ -46,6 +46,7 @@ export const formatPricing = (pricing) => {
     name,
     phone,
     prof_count_number,
+    pc_count_number,
     profession,
   } = pricing;
 
@@ -53,6 +54,7 @@ export const formatPricing = (pricing) => {
 
   return {
     prof_count_number,
+    pc_count_number,
     client: {
       email,
       name,
