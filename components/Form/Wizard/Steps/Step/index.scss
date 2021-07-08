@@ -1,23 +1,22 @@
 @import '../../Stats/index.scss';
 @import '../../../../../styles/variables';
 
+.step {
+  &-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    position: relative;
+    align-items: flex-start;
+  }
+}
+
 @media only screen and (max-width: 750px) {
   .step {
-    &-container {
-      display: flex;
-      flex-direction: column;
-      max-height: none;
-      min-height: 50vh;
-      max-width: 600px;
-      position: relative;
-      margin: 0 auto;
-      align-items: flex-start;
-    }
     &-fields {
       padding: 0 30px;
     }
     &-question {
-      font-family: $bilog-font-family;
       font-size: $font-size-22;
       font-weight: $fw-bold;
     }
@@ -27,26 +26,18 @@
 @media only screen and (min-width: 751px) {
   .step {
     &-container {
-      display: flex;
-      flex-direction: column;
-      max-height: none;
-      min-height: 50vh;
-      max-width: 600px;
-      position: relative;
-      margin: 0 auto;
-      align-items: flex-start;
+      max-width: 1200px;
     }
     &-fields {
-      width: 600px;
       padding: 0 20px;
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      align-items: center;
+      width: 100%;
     }
     &-question {
-      font-family: $bilog-font-family;
-      font-size: $font-size-20;
-      font-weight: $fw-bold;
+      margin-right: 20px;
+      font-size: $font-size-28;
+      font-weight: $fw-regular;
     }
   }
 }
