@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
-const Checkbox = ({ checked, onChange }) => {
-  const [isChecked, setIsChecked] = useState(checked)
+const Checkbox = ({ checked, fieldKey, onChange }) => {
+  const [isChecked, setIsChecked] = useState(checked);
   const onChangeHandler = (e) => {
-    //onChange(e);
+    onChange(fieldKey, e.target.checked);
     setIsChecked(!isChecked);
-  }
+  };
 
   return (
     <div className="checkbox-container">
