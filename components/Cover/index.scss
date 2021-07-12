@@ -1,0 +1,32 @@
+@import "../../styles/variables";
+
+.cover {
+  width: 100%;
+  color: #fff;
+
+  &.default {
+    background-color: $default;
+  }
+
+  &.small {
+    background-color: $small;
+  }
+
+  &.smallpremium {
+    background-color: $smallpremium;
+  }
+
+  &.standard {
+    background-color: $standard;
+  }
+
+  &.full {
+    background-color: $full;
+  }
+
+  &-container {
+    padding: 80px 0 80px;
+    width: 1200px;
+    margin: 0 auto;
+  }
+}

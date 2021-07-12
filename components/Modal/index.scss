@@ -1,0 +1,88 @@
+@import "../../styles/variables";
+@import "~../../styles/animations";
+@import "~../../styles/mixins";
+
+@include translateIn-mixin(-50%, 40%, -50%);
+
+$modal-raised: 0 7px 20px 0 10px 30px -10px rgb(50 50 93 / 25%),
+  0 10px 30px -15px rgb(0 0 0 / 30%);
+$modal-animations-desktop: translateIn 0.2s ease-in-out, fadeIn 0.2s ease-in-out;
+$modal-animations-mobile: fadeIn 0.2s ease-in-out;
+$modal-text-fs: $h3-fs;
+
+.modal-container {
+  .modal {
+    display: none;
+    position: fixed;
+    width: 70%; //TODO: Recheck this for others modals
+    height: 600px;
+    max-width: 998px;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: $modal-raised;
+    border-radius: 6px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    @media screen and (max-width: 751px) {
+      position: fixed;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: none;
+      border-radius: 0;
+    }
+
+    .text {
+      font-size: $modal-text-fs;
+      margin: 0 0 40px;
+    }
+
+    .close-button {
+      position: absolute;
+      right: 0;
+      margin: 0 20px;
+      top: 20px;
+    }
+  }
+
+  .modal-bg {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  &.show-modal {
+    .modal {
+      display: flex;
+      flex-direction: column;
+      z-index: 800;
+      animation: $modal-animations-desktop;
+
+      @media screen and (max-width: 751px) {
+        animation: $modal-animations-mobile;
+      }
+    }
+    .modal-bg {
+      display: block;
+      z-index: 400;
+      opacity: 1;
+
+      @media screen and (max-width: 751px) {
+        display: none;
+      }
+    }
+  }
+
+  &.strech {
+    .modal {
+      width: 40%;
+    }
+  }
+}
