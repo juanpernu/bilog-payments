@@ -3,11 +3,11 @@
 
 @import "../pages/pay/index.scss";
 @import "../pages/versions/index.scss";
-
 @import "../components/index.scss";
+@import "./variables";
 
 * {
-  font-family: "Nunito", sans-serif;
+  font-family: $bilog-font-family;
   box-sizing: border-box;
 }
 

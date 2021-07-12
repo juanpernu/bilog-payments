@@ -2,12 +2,27 @@ import Stats from "../../Stats";
 import AnswerField from "../../AnswerFields";
 
 const Step = (props) => {
-  const { question, step, field, totalSteps } = props;
+  const { step, stepNumber, totalSteps, update, submit } = props;
   return (
-    <div>
-      <p>{question}</p>
-      {AnswerField[field]}
-      <Stats step={step} totalSteps={totalSteps} {...props} />
+    <div className="step-container">
+      {step.map((stepItem, i) => {
+        return (
+          <div key={i} className="step-fields">
+            <p className="step-question">{stepItem.question}</p>
+            <AnswerField
+              field={stepItem.field}
+              fieldKey={stepItem.key}
+              onChange={update}
+            />
+          </div>
+        );
+      })}
+      <Stats
+        stepNumber={stepNumber}
+        submit={submit}
+        totalSteps={totalSteps}
+        {...props}
+      />
     </div>
   );
 };
