@@ -25,6 +25,7 @@ const Step = (props) => {
               field={stepItem.field}
               fieldKey={stepItem.key}
               onChange={update}
+              placeholder={stepItem.placeholder}
             />
             {errors[stepItem.key] && (
               <p className="error">{errors[stepItem.key]}</p>

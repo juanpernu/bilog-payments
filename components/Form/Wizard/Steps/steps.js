@@ -49,6 +49,7 @@ const Steps = [
       question: "También su numero de Telefono:",
       field: "text",
       key: "phone",
+      placeholder: "(+54) (011) 4444-4444",
     },
     {
       question: "Cual es su profesión?",

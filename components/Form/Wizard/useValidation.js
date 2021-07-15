@@ -7,9 +7,16 @@ export function useValidations(dataToValidate, index) {
     3: ["name", "email", "phone", "profession"],
   };
 
+  const emailReg = new RegExp(
+    /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/gm
+  );
+
   requiredFields[index].forEach((requiredField) => {
     if (!dataToValidate[requiredField]) {
       errors[requiredField] = requiredMsg;
+    }
+    if (requiredField === "email" && !emailReg.test(dataToValidate["email"])) {
+      errors[requiredField] = "Email invalido";
     }
   });
 
