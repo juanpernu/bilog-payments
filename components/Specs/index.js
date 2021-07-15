@@ -5,25 +5,20 @@ import Icon from "../Icon";
 import Button from "../Button";
 import Modal from "../Modal";
 
-const Specs = ({ specs, id }) => {
-  const { chars, price, video } = specs;
+const Specs = ({ price, desc, video, id }) => {
   const [showModal, setShowModal] = useState(false);
   return (
     <div className="specs-container">
       <div className="specs-details">
         <p className="copy">Características</p>
-        {id != "default" ? (
+        {id ? (
           <h3 className="subtitle">Es la mejor para vos por que...</h3>
         ) : (
-          <h3 className="subtitle">Todas las versiones incluyen...</h3>
+          <h3 className="subtitle">
+            Hay una versión pensada especialmente para vos.
+          </h3>
         )}
-        <ul>
-          {chars.map((c, i) => (
-            <li key={i}>
-              <Icon className="list-icon" type="check" /> {c}
-            </li>
-          ))}
-        </ul>
+        <p className="description">{desc}</p>
       </div>
       <div className="specs-price">
         {price ? (
@@ -31,14 +26,14 @@ const Specs = ({ specs, id }) => {
             <div className="detached-prices">
               <Value
                 text="Tarifa de instalación"
-                price={price.value.initial}
+                price={price.initial}
                 tooltipText="Un pago de única vez que contempla la instalación y puesta en marcha del servicio."
                 tooltip
               />
               <Value
                 text="Suscripción mensual"
                 className={id}
-                price={price.value.simple}
+                price={price.simple}
                 tooltipText="Valor mensual de la suscripción al servicio."
                 tooltip
               />

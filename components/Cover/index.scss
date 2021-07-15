@@ -3,10 +3,7 @@
 .cover {
   width: 100%;
   color: #fff;
-
-  &.default {
-    background-color: $default;
-  }
+  background-color: $default;
 
   &.small {
     background-color: $small;
