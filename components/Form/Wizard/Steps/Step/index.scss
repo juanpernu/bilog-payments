@@ -1,5 +1,5 @@
-@import '../../Stats/index.scss';
-@import '../../../../../styles/variables';
+@import "../../Stats/index.scss";
+@import "../../../../../styles/variables";
 
 .step {
   &-container {
@@ -8,6 +8,11 @@
     margin: 0 auto;
     position: relative;
     align-items: flex-start;
+
+    .error {
+      color: red;
+      margin-left: 10px;
+    }
   }
 }
 

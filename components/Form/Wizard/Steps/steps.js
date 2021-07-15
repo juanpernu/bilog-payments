@@ -6,11 +6,6 @@ const Steps = [
       key: "prof_count_number",
     },
     {
-      question: "En cuántas computadoras utilizará el software?",
-      field: "numeric",
-      key: "pc_count_number",
-    },
-    {
       question:
         "Trabajas con profesionales y necesitas realizar la liquidación?",
       field: "checkbox",
