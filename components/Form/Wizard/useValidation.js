@@ -16,7 +16,7 @@ export function useValidations(dataToValidate, index) {
       errors[requiredField] = requiredMsg;
     }
     if (requiredField === "email" && !emailReg.test(dataToValidate["email"])) {
-      errors[requiredField] = "Email invalido";
+      errors[requiredField] = "* Email invalido";
     }
   });
 
