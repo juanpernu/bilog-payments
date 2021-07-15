@@ -71,20 +71,3 @@ $footer-light-order: 1px solid #eaeaea;
     }
   }
 }
-
-@media only screen and (min-width: 1201px) {
-  .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-}
-
-// TABLET
-@media only screen and (min-width: 1024px) and (min-height: 1300px) {
-  .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-}
