@@ -2,6 +2,7 @@
 
 .specs-container {
   width: 1200px;
+  height: 437px;
   padding: 50px 0;
   margin: 0 auto;
   display: grid;
@@ -16,24 +17,10 @@
 
   .specs {
     &-details {
-      ul {
-        list-style: none;
-        padding: 0;
-        li {
-          font-size: $p-fs;
-          display: flex;
-          margin-bottom: 11px;
-          line-height: 28px;
-
-          .list-icon {
-            display: inline-block;
-            margin: 3px 18px 0 0;
-            flex-grow: 0;
-            flex-shrink: 0;
-            -ms-flex-positive: 0;
-            -ms-flex-negative: 0;
-          }
-        }
+      .description {
+        font-size: 19px;
+        line-height: 29px;
+        font-weight: 100;
       }
     }
 
