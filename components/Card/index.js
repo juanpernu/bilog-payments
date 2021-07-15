@@ -1,17 +1,5 @@
-import { useRouter } from 'next/router';
-
-const Card = ({ children }) => {
-  const router = useRouter();
-
-  const handleOnClick = (e) => {
-    e.preventDefault()
-  }
-
-  return (
-    <div className="product-card">
-      {children}
-    </div>
-  )
+const Card = ({ children, className }) => {
+  return <div className={`product-card ${className}`}>{children}</div>;
 };
 
 export default Card;

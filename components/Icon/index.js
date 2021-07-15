@@ -5,6 +5,7 @@ import Check from "./check";
 import Video from "./video";
 import Close from "./close";
 import Control from "./control";
+import Send from "./send";
 
 const icons = {
   back: BackArrow,
@@ -13,6 +14,7 @@ const icons = {
   video: Video,
   close: Close,
   control: Control,
+  send: Send,
 };
 
 const GeneratedIcon = ({
