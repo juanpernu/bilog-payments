@@ -1,0 +1,60 @@
+@import "../../styles/variables";
+
+.custom-page {
+  .text {
+    color: $bilog-gray;
+  }
+
+  .success-card {
+    position: absolute;
+    max-width: 600px;
+    padding: 50px;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    // TABLET
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      width: 600px;
+    }
+
+    // MOBILE
+    @media only screen and (max-width: 750px) {
+      min-width: 276px;
+      width: 90%;
+    }
+
+    .icon {
+      background-color: $bilog-blue;
+      border-radius: 50%;
+      padding: 5px;
+      margin-bottom: 20px;
+    }
+
+    .subtitle {
+      color: $bilog-black;
+    }
+  }
+
+  .sugestion-message {
+    padding: 180px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+
+    // MOBILE
+    @media only screen and (max-width: 750px) {
+      width: 90%;
+      padding: 250px 0 180px;
+    }
+
+    .sugestion-button {
+      margin: 0 auto;
+    }
+  }
+}

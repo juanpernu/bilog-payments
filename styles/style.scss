@@ -3,6 +3,7 @@
 
 @import "../pages/pay/index.scss";
 @import "../pages/versions/index.scss";
+@import "../pages/custom/index.scss";
 @import "../components/index.scss";
 @import "./variables";
 
@@ -62,4 +63,37 @@ a {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 20px;
   }
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 32px;
+
+  // MOBILE
+  @media only screen and (max-width: 750px) {
+    font-size: 28px;
+  }
+}
+
+h4 {
+  font-size: 28px;
+}
+
+h5 {
+  font-size: 24px;
+}
+
+.subtitle {
+  font-weight: 300;
+  margin: 0 0 8px 0;
+}
+
+.title {
+  font-size: 42px;
+  line-height: 52px;
+  font-weight: 600;
+  margin: 0;
 }
