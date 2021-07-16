@@ -1,0 +1,77 @@
+// TODO: Remove and merge this variables
+// white the existings one
+$default: #414042;
+$small: #44ace1;
+$smallpremium: #3c5daa;
+$standard: #4e72b8;
+$full: #2c3689;
+
+$box-shadow: 0 50px 100px -20px rgb(50 50 93 / 25%),
+  0 30px 60px -30px rgb(0 0 0 / 30%);
+$border-radius: 8px;
+
+$h3-fs: 19px;
+$p-fs: 17px;
+$copy-fs: 12px;
+
+// Bilog colors
+$bilog-blue: #007aff;
+$bilog-blue-light: #4b87ef;
+$bilog-black: #000;
+$bilog-gray-dark: #202020;
+$bilog-gray: #999;
+$bilog-gray-light: #ddd;
+$bilog-white: #fff;
+$bilog-red: #f80a5a;
+$bilog-green: #00a650;
+
+$bg-color-white: $bilog-white;
+
+// Shadows
+$bilog-shadow: rgba(0, 0, 0, 0.12);
+$bilog-shadow-raised: rgba(0, 0, 0, 0.16);
+
+// Screen sizes
+$screen-mobile: 480px;
+$screen-tablet: 681px;
+$screen-desktop: 1024px;
+
+// Font styles
+$bilog-font-family: "Nunito", sans-serif;
+$font-size-12: 12px;
+$font-size-14: 14px;
+$font-size-16: 16px;
+$font-size-18: 18px;
+$font-size-20: 20px;
+$font-size-22: 22px;
+$font-size-24: 24px;
+$font-size-26: 26px;
+$font-size-28: 28px;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-bold: 600;
+
+// Spacing styles
+$bilog-spacing-32: 32px;
+$bilog-spacing-24: 24px;
+$bilog-spacing-16: 16px;
+$bilog-spacing-8: 8px;
+
+// Border styles
+$bilog-border-radius-6: 6px;
+$bilog-border-radius-5: 5px;
+
+// Text styles
+$title-color: $bilog-black;
+$title-fw: $fw-bold;
+$title-fs: $font-size-20;
+
+$subtitle-color: $bilog-gray;
+$subtitle-fw: $fw-regular;
+$subtitle-fs: $font-size-16;
+
+$text-color: $bilog-black;
+$text-fw: $fw-regular;
+$text-fs: $font-size-14;
+
+$copy-fs: $font-size-12;

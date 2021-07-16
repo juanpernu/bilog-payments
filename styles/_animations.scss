@@ -1,0 +1,21 @@
+@keyframes dd-in {
+  0% {
+    opacity: 0.4;
+    transform: scale(0.975);
+    transform-origin: center top;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    transform-origin: center top;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

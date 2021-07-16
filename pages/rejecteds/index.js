@@ -1,24 +1,12 @@
-import { test } from '../../services/test';
-
 const Rejecteds = ({ user, amount }) => {
-  const onSubmitHandler = async () => {
-    try {
-      const data = await test();
-      if (data) {
-        console.log(data)
-      };
-    } catch (error) {
-      console.log('error', error);
-    }
-  }
   return (
     <section id="login-page">
       <h2>Rejecteds</h2>
       <p>Hola {user}</p>
       <p>Usted debe abonar $ {amount}</p>
-      <button onClick={onSubmitHandler}>Regularizar pago</button>
+      <button onClick={() => console.log("hola")}>Regularizar pago</button>
     </section>
-  )
+  );
 };
 
 export async function getServerSideProps(req, res) {
