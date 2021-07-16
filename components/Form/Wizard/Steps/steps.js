@@ -6,11 +6,6 @@ const Steps = [
       key: "prof_count_number",
     },
     {
-      question: "En cuántas computadoras utilizará el software?",
-      field: "numeric",
-      key: "pc_count_number",
-    },
-    {
       question:
         "Trabajas con profesionales y necesitas realizar la liquidación?",
       field: "checkbox",
@@ -54,6 +49,7 @@ const Steps = [
       question: "También su numero de Telefono:",
       field: "text",
       key: "phone",
+      placeholder: "(+54) (011) 4444-4444",
     },
     {
       question: "Cual es su profesión?",

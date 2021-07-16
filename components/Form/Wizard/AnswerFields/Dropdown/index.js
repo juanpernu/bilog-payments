@@ -2,7 +2,7 @@ const Dropdown = ({ onChange, fieldKey }) => {
   const onChangeHandler = (e) => onChange(fieldKey, e.target.value);
   return (
     <select id="profession" name="profession" onChange={onChangeHandler}>
-      <option value="" disabled>
+      <option value="" selected disabled>
         Seleciona una
       </option>
       <option value="dentist">Odontólogo/a</option>
