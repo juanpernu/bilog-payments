@@ -1,60 +1,109 @@
 @import "../../styles/variables";
 
-.addon {
-  background-color: #fff;
-  box-shadow: $box-shadow;
-  border-radius: $border-radius;
-  padding: 40px;
+.addons {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 0;
 
-  &-container {
-    display: flex;
-    .icon {
-      margin-right: 10px;
-    }
-    .title {
-      font-weight: 600;
-      line-height: 28px;
-      color: $bilog-blue;
-      font-size: 21px;
-      line-height: 32px;
-      text-transform: uppercase;
+  &-header {
+    margin: 60px 0 60px;
+    text-align: center;
+
+    .copy {
+      margin: 0;
+      font-size: 19px;
+      color: $bilog-gray;
+      font-weight: 300;
     }
   }
 
-  &-description {
-    margin: 8px 0;
-    font-weight: 400;
-    font-size: $h3-fs;
-    line-height: 28px;
-    color: #525f7f;
-  }
+  .items-container {
+    width: 100%;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
 
-  &-content {
-    display: flex;
-    flex-direction: row;
+    .addon-item {
+      display: grid;
+      grid-template-columns: 24px auto;
+      grid-column-gap: 18px;
 
-    .pricing-container {
-      padding: 16px 0 16px 28px;
-      margin: 0 0 0 20px;
-      width: 230px;
-      border-left: 1px solid #eee;
-      flex: content;
-      flex-direction: column;
-
-      p {
+      .text {
         margin: 0;
-      }
-
-      .annotation {
-        font-size: 24px;
-        color: #24b47e;
-        display: block;
-        position: relative;
+        padding: 0;
+        color: #888;
       }
     }
   }
 
-  & + .addon {
-    margin: 40px 0 0;
+  .addon {
+    background-color: #fff;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    padding: 40px;
+
+    &-container {
+      display: flex;
+      .icon {
+        margin-right: 20px;
+      }
+      .title {
+        font-weight: 600;
+        line-height: 28px;
+        color: $bilog-blue;
+        font-size: 21px;
+        line-height: 32px;
+        text-transform: uppercase;
+      }
+    }
+
+    &-description {
+      margin: 8px 0;
+      font-weight: 400;
+      font-size: $h3-fs;
+      line-height: 28px;
+      color: #525f7f;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: row;
+
+      .pricing-container {
+        padding: 16px 0 16px 28px;
+        margin: 0 0 0 20px;
+        width: 230px;
+        border-left: 1px solid #eee;
+        flex: content;
+        flex-direction: column;
+
+        p {
+          margin: 0;
+        }
+
+        .annotation {
+          font-size: 24px;
+          color: #24b47e;
+          display: block;
+          position: relative;
+        }
+
+        .disclaimer {
+          position: relative;
+          color: $bilog-gray;
+          font-size: 15px;
+          font-weight: 100;
+          line-height: 22px;
+          display: block;
+          margin: 8px 0 0;
+        }
+      }
+    }
+
+    & + .addon {
+      margin: 40px 0 0;
+    }
   }
 }

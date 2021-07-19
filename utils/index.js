@@ -79,3 +79,14 @@ export const formatPricing = (pricing) => {
     },
   };
 };
+
+export const formatVersion = (version) => {
+  const versions = {
+    small: "Small",
+    smallpre: "Small Premium",
+    standard: "Standard",
+    full: "Full",
+  };
+
+  return versions[version];
+};

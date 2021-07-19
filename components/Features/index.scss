@@ -1,0 +1,65 @@
+@import "../../styles/variables";
+
+.features {
+  width: 1200px;
+  margin: 0 auto;
+
+  &-header {
+    margin: 60px 0 60px;
+    text-align: center;
+
+    .copy {
+      margin: 0;
+      font-size: 19px;
+      color: $bilog-gray;
+      font-weight: 300;
+    }
+  }
+
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px 70px;
+    gap: 40px 70px;
+    margin-bottom: 40px;
+
+    .feature {
+      &-title {
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 32px;
+        color: $bilog-gray-dark;
+      }
+
+      &-desc {
+        font-size: 15px;
+        line-height: 24px;
+        color: $bilog-gray-dark;
+      }
+    }
+  }
+
+  .separator {
+    text-align: center;
+    padding: 20px 0 60px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: #e6ebf1;
+      height: 2px;
+      width: 100%;
+      left: 0;
+      top: 44px;
+    }
+
+    p {
+      color: $bilog-gray;
+      background-color: #fff;
+      position: relative;
+      display: inline-block;
+      padding: 0 20px;
+    }
+  }
+}

@@ -4,15 +4,11 @@ import Cover from "../../components/Cover";
 import Plans from "../../components/Plans";
 import Specs from "../../components/Specs";
 import Addons from "../../components/Addon";
+import Features from "../../components/Features";
 
 const Versions = ({ content, addons }) => {
   const {
-    version: {
-      id,
-      price,
-      video = "https://www.youtube.com/embed/-k0AR8PpKF8",
-      descripcion,
-    },
+    version: { id, price, video, descripcion },
   } = content;
   return (
     <section className="versions-page">
@@ -20,6 +16,7 @@ const Versions = ({ content, addons }) => {
         <Plans plan={id} />
       </Cover>
       <Specs id={id} desc={descripcion} video={video} price={price} />
+      <Features version={id} />
       {addons && <Addons addons={addons} />}
     </section>
   );

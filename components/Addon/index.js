@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Addon from "./addonItem";
 import Content from "../../content/addons";
 
@@ -5,17 +6,26 @@ const Addons = ({ addons }) => {
   const splitedAddons = addons.split(",");
   return (
     <section className="addons">
-      <h2 className="addons-title">Mirá todo lo que podes hacer con</h2>
-      {splitedAddons.map((ad) => {
+      <div className="addons-header">
+        <h2 className="subtitle">Potenciá tu negocio al instante</h2>
+        <p className="copy">
+          Aumentá el rendimiento de tu negocio con nuestros módulos
+          especializados.
+        </p>
+      </div>
+      {splitedAddons.map((ad, i) => {
         const item = Content[ad];
         return (
-          <Addon
-            title={item.title}
-            description={item.description}
-            icon={item.icon}
-            price={item.price}
-            items={item.items}
-          />
+          <Fragment key={i}>
+            <Addon
+              title={item.title}
+              description={item.description}
+              icon={item.icon}
+              color={item.color}
+              price={item.price}
+              items={item.items}
+            />
+          </Fragment>
         );
       })}
     </section>

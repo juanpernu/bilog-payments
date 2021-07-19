@@ -1,18 +1,20 @@
 import Item from "./item";
 import Icon from "../Icon";
 
-const Addon = ({ title, description, icon, items, price }) => {
+const Addon = ({ title, description, icon, items, price, color }) => {
   return (
     <div className="addon">
       <span className="addon-container">
         <Icon
           type={icon}
-          width={32}
-          height={32}
+          width={28}
+          height={28}
           className="icon"
-          colorFill="#007aff"
+          colorFill={color}
         />
-        <h3 className="title">{title}</h3>
+        <h3 className="title" style={{ color: color }}>
+          {title}
+        </h3>
       </span>
       <h3 className="addon-description">{description}</h3>
       <div className="addon-content">
@@ -22,7 +24,8 @@ const Addon = ({ title, description, icon, items, price }) => {
           ))}
         </div>
         <div className="pricing-container">
-          <p className="annotation">$ {price}</p>
+          <p className="annotation">$ {price}.-</p>
+          <p className="disclaimer">pago de única vez</p>
         </div>
       </div>
     </div>
