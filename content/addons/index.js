@@ -1,4 +1,4 @@
-const addons = {
+const Content = {
   adm: {
     id: "adm",
     title: "Módulo administración",
@@ -57,4 +57,21 @@ const addons = {
   },
 };
 
-export default addons;
+const AlwaysOn = {
+  emkt: {
+    id: "emkt",
+    title: "Email Marketing",
+    description:
+      "Conecta con tus clientes y potenciá tu negocio de manera rápida y sencilla.",
+    icon: "email",
+  },
+  sms: {
+    id: "sms",
+    title: "Envio de SMS",
+    description:
+      "Reducí el ausentismo enviando recordatorios de turno a tus pacientes con SMS.",
+    icon: "sms",
+  },
+};
+
+export { Content, AlwaysOn };

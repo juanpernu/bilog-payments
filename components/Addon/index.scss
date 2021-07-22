@@ -3,7 +3,7 @@
 .addons {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 0;
+  padding: 40px 0;
 
   &-header {
     margin: 60px 0 60px;
@@ -38,12 +38,15 @@
     }
   }
 
-  .addon {
+  .addon,
+  .alwayson-addon {
     background-color: #fff;
     box-shadow: $box-shadow;
     border-radius: $border-radius;
     padding: 40px;
+  }
 
+  .addon {
     &-container {
       display: flex;
       .icon {
@@ -89,21 +92,104 @@
           display: block;
           position: relative;
         }
-
-        .disclaimer {
-          position: relative;
-          color: $bilog-gray;
-          font-size: 15px;
-          font-weight: 100;
-          line-height: 22px;
-          display: block;
-          margin: 8px 0 0;
-        }
       }
     }
 
     & + .addon {
       margin: 40px 0 0;
+    }
+  }
+
+  .alwayson-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 40px;
+  }
+
+  .alwayson-addon {
+    padding: 0;
+
+    .wrapper {
+      padding: 40px;
+    }
+
+    .addon-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: baseline;
+
+      .disclaimer {
+        margin-bottom: 5px;
+      }
+
+      .actions {
+        display: flex;
+        align-items: center;
+
+        .arrow-container {
+          width: 22px;
+          height: 22px;
+
+          .icon {
+            opacity: 0.8;
+            transition: opacity 0.2s ease;
+            &:hover {
+              opacity: 1;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .selection {
+          min-width: 98px;
+          text-align: center;
+          font-size: 40px;
+          font-weight: 100;
+          margin: 0 20px;
+          padding: 0;
+          color: $bilog-gray-dark;
+        }
+      }
+      .pricing-container {
+        margin: 0;
+        border-left: 1px solid #eee;
+        flex: content;
+        flex-direction: column;
+
+        .annotation {
+          font-size: 40px;
+          color: $bilog-gray;
+
+          &.selected {
+            color: #24b47e;
+          }
+        }
+      }
+    }
+
+    .suscribe-container {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      background-color: #f6f9fc;
+      color: $bilog-blue;
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 600;
+      transition: background-color 0.2s ease-in;
+
+      &:hover {
+        background-color: #eee;
+        cursor: pointer;
+      }
+
+      p {
+        margin: 0;
+      }
     }
   }
 }

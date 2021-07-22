@@ -48,6 +48,12 @@ button {
     background: rgb(255, 255, 255);
   }
 
+  &.terciary {
+    color: rgb(0, 0, 0);
+    border: 1px solid #2af8f8;
+    background-color: #0de4e4;
+  }
+
   &.suscription-button {
     width: 100%;
     margin: 20px 0 0;

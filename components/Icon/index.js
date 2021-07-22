@@ -1,7 +1,9 @@
 import React from "react";
 
 import Admin from "./admin";
-import BackArrow from "./back-arrow";
+import ArrowRight from "./arrow-right";
+import ArrowLeft from "./arrow-left";
+import BackArrow from "./arrow-back";
 import Budget from "./budget";
 import Billing from "./billing";
 import Bank from "./bank";
@@ -10,12 +12,14 @@ import Close from "./close";
 import Control from "./control";
 import Cloud from "./cloud";
 import Debts from "./debts";
+import Email from "./email";
 import GeneralStatistics from "./general-statistics";
 import Images from "./images";
 import Laboratory from "./laboratory";
 import MedicalInsurance from "./medical-insurance";
 import Professionals from "./professionals";
 import Send from "./send";
+import Sms from "./sms";
 import Star from "./star";
 import Stock from "./stock";
 import Schedule from "./schedule";
@@ -23,10 +27,13 @@ import Statistics from "./statistics";
 import Tooltip from "./tooltip";
 import Video from "./video";
 import WeekSchedule from "./week-schedule";
+import Wand from "./wand";
 
 const icons = {
   admin: Admin,
   back: BackArrow,
+  arrowright: ArrowRight,
+  arrowleft: ArrowLeft,
   bank: Bank,
   budget: Budget,
   billing: Billing,
@@ -35,11 +42,14 @@ const icons = {
   cloud: Cloud,
   control: Control,
   debts: Debts,
+  email: Email,
   images: Images,
   laboratory: Laboratory,
+  wand: Wand,
   send: Send,
   stock: Stock,
   star: Star,
+  sms: Sms,
   schedule: Schedule,
   statistics: Statistics,
   generalstatistics: GeneralStatistics,

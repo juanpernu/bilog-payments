@@ -1,0 +1,108 @@
+.billing {
+  width: 100%;
+  margin-top: 60px;
+  padding: 40px 0;
+  background-color: #0c2e4f;
+
+  &-wrapper {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 80px;
+    grid-column-gap: 80px;
+    margin: 0 auto;
+    padding: 40px 0;
+
+    .content {
+      .subtitle {
+        color: $bilog-white;
+        font-weight: 600;
+      }
+      .text {
+        color: $bilog-gray-light;
+        font-size: 20px;
+        font-weight: 100;
+        line-height: 1.5;
+      }
+    }
+
+    .detail {
+      padding: 20px;
+      background-color: #002c59;
+      border-radius: 8px;
+      border: 1px solid #0f395e;
+
+      .copy {
+        &_title,
+        &_description {
+          color: $bilog-white;
+          padding: 0;
+        }
+
+        &_title {
+          font-weight: 600;
+          font-size: 20px;
+          margin: 0 0 6px;
+        }
+
+        &_description {
+          font-weight: 300;
+          font-size: 16px;
+          margin: 0 0 15px;
+        }
+      }
+
+      .monthly {
+        margin-bottom: 20px;
+      }
+
+      .total-bill {
+        margin-top: 16px;
+        padding-top: 16px;
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+        font-size: 20px;
+        display: flex;
+        text-transform: uppercase;
+        align-items: flex-end;
+        justify-content: space-between;
+        .price {
+          color: #0de4e4;
+        }
+      }
+
+      .item {
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        padding: 3px 8px;
+        border-radius: 4px;
+        background-color: rgba(255, 255, 255, 0.07);
+        margin-bottom: 5px;
+
+        &.total {
+          margin: 12px 0 0;
+          padding: 0;
+          border-radius: 0;
+          background-color: transparent;
+          font-weight: 600;
+
+          .price {
+            color: #0de4e4;
+          }
+        }
+
+        .description {
+          color: $bilog-gray-light;
+        }
+
+        .price {
+          color: $bilog-white;
+        }
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
