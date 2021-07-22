@@ -48,7 +48,13 @@ const Versions = ({ content, addons, profCount }) => {
       <Cover template={id}>
         <Plans plan={id} />
       </Cover>
-      <Specs id={id} desc={descripcion} video={video} price={price} />
+      <Specs
+        id={id}
+        desc={descripcion}
+        video={video}
+        price={price}
+        profCount={profCount}
+      />
       <Features version={id} />
       {addons && <Addons addons={addons} />}
       <AlwaysOnAddons addons={alwaysOn} onChange={alwaysOnHandler} />
