@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 
 import { billingInitialState } from "../../utils";
 import { getVersionContent } from "../../services/versionsService";
@@ -6,11 +6,12 @@ import { getVersionContent } from "../../services/versionsService";
 import Cover from "../../components/Cover";
 import Plans from "../../components/Plans";
 import Specs from "../../components/Specs";
-import Features from "../../components/Features";
 import Billing from "../../components/Billing";
+import Estimate from "../../components/Estimate";
+import { Features, Commons } from "../../components/Features";
 import { Addons, AlwaysOnAddons } from "../../components/Addon";
 
-const Versions = ({ content, addons, profCount }) => {
+const Versions = ({ content, addons, profCount, shallow }) => {
   const [billing, setBilling] = useState(billingInitialState);
   const {
     lista_sms: sms,
@@ -55,18 +56,29 @@ const Versions = ({ content, addons, profCount }) => {
         price={price}
         profCount={profCount}
       />
+      {!id && <Commons />}
       <Features version={id} />
       {addons && <Addons addons={addons} />}
-      <AlwaysOnAddons addons={alwaysOn} onChange={alwaysOnHandler} />
-      <Billing billing={billing} selectedAddons={addons} />
+      {id && !shallow && (
+        <Fragment>
+          <AlwaysOnAddons addons={alwaysOn} onChange={alwaysOnHandler} />
+          <Billing billing={billing} selectedAddons={addons} />
+        </Fragment>
+      )}
+      {(!id || shallow) && <Estimate />}
     </section>
   );
 };
 
 export async function getServerSideProps(req, res) {
-  const { version = "default", addons = null, profCount = 1 } = req.query;
+  const {
+    version = "default",
+    addons = null,
+    profCount = 1,
+    shallow = false,
+  } = req.query;
   const { data: content } = await getVersionContent(version);
-  return { props: { content, addons, profCount } };
+  return { props: { content, addons, profCount, shallow } };
 }
 
 export default Versions;

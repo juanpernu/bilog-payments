@@ -1,10 +1,12 @@
+import Button from "../../../Button";
+
 const Stats = ({ nextStep, previousStep, totalSteps, stepNumber, submit }) => (
   <div className="step-stats">
-    {stepNumber > 1 && <button onClick={previousStep}>Volver</button>}
+    {stepNumber > 1 && <Button onClick={previousStep}>Volver</Button>}
     {stepNumber < totalSteps ? (
-      <button onClick={nextStep}>Continuar</button>
+      <Button onClick={nextStep}>Continuar</Button>
     ) : (
-      <button onClick={submit}>Enviar</button>
+      <Button onClick={submit}>Enviar</Button>
     )}
   </div>
 );

@@ -2,6 +2,7 @@ const Default = {
   mensajeError: null,
   client: null,
   version: {
+    id: null,
     descripcion: "Todo lo que necesitas para tu negocio",
     rowversion: null,
     price: null,

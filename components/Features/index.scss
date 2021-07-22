@@ -1,11 +1,15 @@
 @import "../../styles/variables";
 
+$card-shadow: 0 20px 50px -10px rgb(50 50 93 / 25%),
+  0 20px 50px -30px rgb(0 0 0 / 30%);
+
 .features {
   width: 1200px;
   margin: 0 auto;
+  padding-top: 100px;
 
   &-header {
-    margin: 60px 0 60px;
+    margin: 0 0 60px;
     text-align: center;
 
     .copy {
@@ -35,6 +39,46 @@
         font-size: 15px;
         line-height: 24px;
         color: $bilog-gray-dark;
+      }
+    }
+  }
+
+  .commons-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0 30px;
+    gap: 0 30px;
+    margin-bottom: 40px;
+
+    .version-card {
+      padding: 20px;
+      background-color: $bilog-white;
+      box-shadow: $card-shadow;
+      border-radius: $border-radius;
+
+      .title {
+        margin: 0;
+      }
+
+      .version-link {
+        text-transform: uppercase;
+        font-size: 12px;
+        width: fit-content;
+        width: -moz-fit-content;
+        display: table;
+
+        p {
+          transition: all 0.1s ease-in-out;
+          color: $bilog-blue;
+          background-color: #dfeeff;
+          border-radius: 4px;
+          padding: 4px 8px;
+          margin: 20px 0 0;
+          &:hover {
+            color: $bilog-white;
+            background-color: $bilog-blue;
+          }
+        }
       }
     }
   }
