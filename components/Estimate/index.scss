@@ -6,6 +6,13 @@
   text-align: center;
   color: $bilog-white;
 
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+  */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    padding: 60px 40px;
+  }
+
   .wrapper {
     max-width: 1200px;
     margin: 0 auto;
@@ -26,6 +33,8 @@
       text-align: left;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      grid-gap: 30px 40px;
+      grid-column-gap: 40px;
 
       .number,
       .disclaimer {

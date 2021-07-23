@@ -30,5 +30,19 @@
     padding: 80px 0 80px;
     max-width: 1200px;
     margin: 0 auto;
+
+    /* 
+      ##Device = Tablets, Ipads (portrait)
+    */
+    @media (min-width: 768px) and (max-width: 1024px) {
+      padding: 80px 40px;
+    }
+
+    /* 
+      Mobile
+    */
+    @media (max-width: 767px) {
+      padding: 40px 20px;
+    }
   }
 }

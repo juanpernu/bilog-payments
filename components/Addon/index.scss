@@ -5,6 +5,19 @@
   margin: 0 auto;
   padding-top: 100px;
 
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+  */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1366px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
   &-header {
     margin: 0 0 60px;
     text-align: center;
@@ -79,7 +92,7 @@
         margin: 0 0 0 20px;
         width: 230px;
         border-left: 1px solid #eee;
-        flex: content;
+        display: flex;
         flex-direction: column;
 
         p {
@@ -109,6 +122,15 @@
   .alwayson-addon {
     padding: 0;
 
+    /* 
+      ##Device = Tablets, Ipads (portrait)
+    */
+    @media (min-width: 768px) and (max-width: 1023px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
     .wrapper {
       padding: 40px;
     }
@@ -117,6 +139,21 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       align-items: baseline;
+
+      /* 
+        ##Device = Tablets, Ipads (portrait)
+      */
+      @media (min-width: 768px) and (max-width: 1023px) {
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* 
+        Ipad Pro
+      */
+      @media (min-width: 1024px) and (max-width: 1366px) {
+        display: flex;
+      }
 
       .disclaimer {
         margin-bottom: 5px;
@@ -148,17 +185,42 @@
           margin: 0 20px;
           padding: 0;
           color: $bilog-gray-dark;
+
+          /* 
+            ##Device = Tablets, Ipads (portrait)
+          */
+          @media (min-width: 768px) and (max-width: 1024px) {
+            font-size: 30px;
+            margin: 0 10px;
+          }
         }
       }
+
       .pricing-container {
         margin: 0;
         border-left: 1px solid #eee;
-        flex: content;
+        display: flex;
         flex-direction: column;
+        width: auto;
+
+        /* 
+          ##Device = Tablets, Ipads (portrait)
+        */
+        @media (min-width: 768px) and (max-width: 1023px) {
+          border-left: none;
+          padding: 20px 0 0 0;
+        }
 
         .annotation {
           font-size: 40px;
           color: $bilog-gray;
+
+          /* 
+            ##Device = Tablets, Ipads (portrait)
+          */
+          @media (min-width: 768px) and (max-width: 1024px) {
+            font-size: 30px;
+          }
 
           &.selected {
             color: #24b47e;

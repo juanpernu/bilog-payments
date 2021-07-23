@@ -1,13 +1,29 @@
 @import "../../styles/variables";
 
 .specs-container {
-  width: 1200px;
+  max-width: 1200px;
   height: 437px;
   padding: 50px 0;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 80px;
+
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+  */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    grid-column-gap: 50px;
+    padding: 50px 40px;
+    height: auto;
+  }
+
+  // MOBILE
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px;
+  }
 
   .copy {
     font-size: $copy-fs;
@@ -31,12 +47,35 @@
 
       .detached-prices {
         display: flex;
+
+        /* 
+          ##Device = Tablets, Ipads (portrait)
+        */
+        @media (min-width: 768px) and (max-width: 1023px) {
+          flex-direction: column;
+        }
+
+        /* 
+          Ipad Pro
+        */
+        @media (min-width: 1024px) and (max-width: 1366px) {
+          flex-direction: row;
+        }
       }
 
       .price-wrapper {
         margin: 0 30px 20px 0;
         padding-right: 30px;
-        border-right: 2px solid #ddd;
+        border-right: 1px solid #ddd;
+
+        /* 
+          ##Device = Tablets, Ipads (portrait)
+        */
+        @media (min-width: 768px) and (max-width: 1023px) {
+          padding: 0 0 20px 0;
+          border: none;
+          border-bottom: 1px solid #ddd;
+        }
 
         &:last-of-type {
           margin: 0;
@@ -72,6 +111,13 @@
               border-radius: $border-radius;
               padding: 10px;
               transition: all 0.2s ease-in;
+
+              /* 
+                ##Device = Tablets, Ipads (portrait)
+              */
+              @media (min-width: 768px) and (max-width: 1024px) {
+                width: 200px;
+              }
 
               p {
                 margin: 0;
@@ -125,6 +171,15 @@
 
         &-button {
           display: flex;
+        }
+      }
+
+      /* 
+        ##Device = Tablets, Ipads (portrait)
+      */
+      @media (min-width: 768px) and (max-width: 1024px) {
+        iframe {
+          min-height: 300px;
         }
       }
     }

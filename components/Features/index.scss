@@ -4,9 +4,16 @@ $card-shadow: 0 20px 50px -10px rgb(50 50 93 / 25%),
   0 20px 50px -30px rgb(0 0 0 / 30%);
 
 .features {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding-top: 100px;
+
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+  */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    padding: 60px 40px 0;
+  }
 
   &-header {
     margin: 0 0 60px;
@@ -27,6 +34,13 @@ $card-shadow: 0 20px 50px -10px rgb(50 50 93 / 25%),
     gap: 40px 70px;
     margin-bottom: 40px;
 
+    /* 
+      ##Device = Tablets, Ipads (portrait)
+    */
+    @media (min-width: 768px) and (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     .feature {
       &-title {
         font-weight: 500;
@@ -46,9 +60,16 @@ $card-shadow: 0 20px 50px -10px rgb(50 50 93 / 25%),
   .commons-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 0 30px;
-    gap: 0 30px;
+    grid-gap: 30px 30px;
+    gap: 30px 30px;
     margin-bottom: 40px;
+
+    /* 
+      ##Device = Tablets, Ipads (portrait)
+    */
+    @media (min-width: 768px) and (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     .version-card {
       padding: 20px;
