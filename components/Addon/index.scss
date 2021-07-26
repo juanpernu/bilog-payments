@@ -5,15 +5,20 @@
   margin: 0 auto;
   padding-top: 100px;
 
-  /* 
-    ##Device = Tablets, Ipads (portrait)
-  */
+  // TABLET
   @media (min-width: 768px) and (max-width: 1023px) {
     padding-left: 40px;
     padding-right: 40px;
   }
 
+  // IPAD PRO
   @media (min-width: 1024px) and (max-width: 1366px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  // MOBILE
+  @media (min-width: 320px) and (max-width: 767px) {
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -38,15 +43,34 @@
     grid-column-gap: 40px;
     grid-row-gap: 40px;
 
+    // MOBILE
+    @media (min-width: 320px) and (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+
     .addon-item {
       display: grid;
       grid-template-columns: 24px auto;
       grid-column-gap: 18px;
 
+      // MOBILE
+      @media (min-width: 320px) and (max-width: 767px) {
+        grid-template-columns: 1fr;
+      }
+
       .text {
         margin: 0;
         padding: 0;
         color: #888;
+      }
+
+      .addon-icon {
+        // MOBILE
+        @media (min-width: 320px) and (max-width: 767px) {
+          margin-bottom: 8px;
+          left: -2px;
+          position: relative;
+        }
       }
     }
   }
@@ -57,13 +81,29 @@
     box-shadow: $box-shadow;
     border-radius: $border-radius;
     padding: 40px;
+
+    // MOBILE
+    @media (min-width: 320px) and (max-width: 767px) {
+      padding: 20px;
+    }
   }
 
   .addon {
     &-container {
       display: flex;
+
+      // MOBILE
+      @media (min-width: 320px) and (max-width: 767px) {
+        flex-direction: column;
+      }
+
       .icon {
         margin-right: 20px;
+
+        // MOBILE
+        @media (min-width: 320px) and (max-width: 767px) {
+          margin: 0 0 8px;
+        }
       }
       .title {
         font-weight: 600;
@@ -81,11 +121,22 @@
       font-size: $h3-fs;
       line-height: 28px;
       color: #525f7f;
+
+      // MOBILE
+      @media (min-width: 320px) and (max-width: 767px) {
+        font-size: 18px;
+        line-height: 25px;
+      }
     }
 
     &-content {
       display: flex;
       flex-direction: row;
+
+      // MOBILE
+      @media (min-width: 320px) and (max-width: 767px) {
+        flex-direction: column;
+      }
 
       .pricing-container {
         padding: 16px 0 16px 28px;
@@ -94,6 +145,14 @@
         border-left: 1px solid #eee;
         display: flex;
         flex-direction: column;
+
+        // MOBILE
+        @media (min-width: 320px) and (max-width: 767px) {
+          border: none;
+          border-top: 1px solid #eee;
+          padding: 16px 0 0;
+          margin: 20px 0 0;
+        }
 
         p {
           margin: 0;
@@ -104,6 +163,11 @@
           color: #24b47e;
           display: block;
           position: relative;
+
+          // MOBILE
+          @media (min-width: 320px) and (max-width: 767px) {
+            font-size: 32px;
+          }
         }
       }
     }
@@ -117,14 +181,18 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 0 40px;
+
+    // MOBILE
+    @media (min-width: 320px) and (max-width: 767px) {
+      grid-template-columns: 1fr;
+      grid-gap: 40px 0;
+    }
   }
 
   .alwayson-addon {
     padding: 0;
 
-    /* 
-      ##Device = Tablets, Ipads (portrait)
-    */
+    // TABLET
     @media (min-width: 768px) and (max-width: 1023px) {
       display: flex;
       flex-direction: column;
@@ -140,19 +208,21 @@
       grid-template-columns: repeat(2, 1fr);
       align-items: baseline;
 
-      /* 
-        ##Device = Tablets, Ipads (portrait)
-      */
+      // TABLET
       @media (min-width: 768px) and (max-width: 1023px) {
         display: flex;
         flex-direction: column;
       }
 
-      /* 
-        Ipad Pro
-      */
+      // IPAD PRO
       @media (min-width: 1024px) and (max-width: 1366px) {
         display: flex;
+      }
+
+      // MOBILE
+      @media (min-width: 320px) and (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
       }
 
       .disclaimer {
@@ -186,10 +256,14 @@
           padding: 0;
           color: $bilog-gray-dark;
 
-          /* 
-            ##Device = Tablets, Ipads (portrait)
-          */
+          // TABLET
           @media (min-width: 768px) and (max-width: 1024px) {
+            font-size: 30px;
+            margin: 0 10px;
+          }
+
+          // MOBILE
+          @media (min-width: 320px) and (max-width: 767px) {
             font-size: 30px;
             margin: 0 10px;
           }
@@ -203,21 +277,29 @@
         flex-direction: column;
         width: auto;
 
-        /* 
-          ##Device = Tablets, Ipads (portrait)
-        */
+        //TABLET
         @media (min-width: 768px) and (max-width: 1023px) {
+          border-top: 1px solid #eee;
           border-left: none;
           padding: 20px 0 0 0;
+          margin: 10px 0 0 0;
+          width: 100%;
+        }
+
+        // MOBILE
+        @media (min-width: 320px) and (max-width: 767px) {
+          border-top: 1px solid #eee;
+          border-left: none;
+          padding: 20px 0 0 0;
+          margin: 10px 0 0 0;
+          width: 100%;
         }
 
         .annotation {
           font-size: 40px;
           color: $bilog-gray;
 
-          /* 
-            ##Device = Tablets, Ipads (portrait)
-          */
+          //TABLET
           @media (min-width: 768px) and (max-width: 1024px) {
             font-size: 30px;
           }

@@ -12,8 +12,8 @@ const Commons = () => {
         </p>
       </div>
       <div className="commons-container">
-        {Content.map((card) => (
-          <Card className="version-card">
+        {Content.map((card, i) => (
+          <Card className="version-card" key={i}>
             <div className="card-content">
               <span className="copy">{card.copy}</span>
               <h3 className="title">{card.title}</h3>

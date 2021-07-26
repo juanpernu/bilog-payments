@@ -25,7 +25,7 @@ $modal-text-fs: $h3-fs;
     top: 50%;
     transform: translate(-50%, -50%);
 
-    @media screen and (max-width: 751px) {
+    @media (min-width: 320px) and (max-width: 767px) {
       position: fixed;
       left: 0;
       width: 100%;
@@ -65,8 +65,14 @@ $modal-text-fs: $h3-fs;
       z-index: 800;
       animation: $modal-animations-desktop;
 
-      @media screen and (max-width: 751px) {
+      @media (min-width: 320px) and (max-width: 767px) {
         animation: $modal-animations-mobile;
+        position: fixed;
+        top: 312px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform: translate(0, 0);
       }
     }
     .modal-bg {
@@ -74,7 +80,7 @@ $modal-text-fs: $h3-fs;
       z-index: 400;
       opacity: 1;
 
-      @media screen and (max-width: 751px) {
+      @media (min-width: 320px) and (max-width: 767px) {
         display: none;
       }
     }
@@ -83,6 +89,11 @@ $modal-text-fs: $h3-fs;
   &.strech {
     .modal {
       width: 40%;
+
+      @media (min-width: 320px) and (max-width: 767px) {
+        width: 100vw;
+        height: 100vh;
+      }
     }
   }
 }

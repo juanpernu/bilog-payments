@@ -33,7 +33,7 @@ const Specs = ({ price, desc, video, id, profCount }) => {
               <Value
                 text="Suscripción mensual"
                 className={id}
-                price={profCount > 5 ? price.complex : price.simple}
+                price={profCount > 5 ? price.simple : price.simple}
                 tooltipText="Valor mensual de la suscripción al servicio."
                 tooltip
               />

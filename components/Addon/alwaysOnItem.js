@@ -65,9 +65,6 @@ const AlwaysOnItem = ({
                   className="icon"
                 />
               </span>
-              <span className="arrow-container">
-                <div className="arrow-left" />
-              </span>
             </div>
           </div>
           <div className="pricing-container">

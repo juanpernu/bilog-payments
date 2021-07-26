@@ -15,11 +15,12 @@ const Features = ({ version }) => {
         </p>
       </div>
       <div className="features-container">
-        {Content["default"].map((f) => (
+        {Content["default"].map((f, i) => (
           <FeatureItem
             icon={f.icon}
             title={f.title}
             description={f.description}
+            key={i}
           />
         ))}
       </div>
@@ -29,11 +30,12 @@ const Features = ({ version }) => {
             <p className="copy uppercase">Y además</p>
           </div>
           <div className="features-container">
-            {Content[version].map((f) => (
+            {Content[version].map((f, i) => (
               <FeatureItem
                 icon={f.icon}
                 title={f.title}
                 description={f.description}
+                key={i}
               />
             ))}
           </div>
