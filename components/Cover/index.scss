@@ -9,7 +9,7 @@
     background-color: $small;
   }
 
-  &.smallpremium {
+  &.smallpre {
     background-color: $smallpremium;
   }
 
@@ -30,5 +30,15 @@
     padding: 80px 0 80px;
     max-width: 1200px;
     margin: 0 auto;
+
+    // TABLET
+    @media (min-width: 768px) and (max-width: 1024px) {
+      padding: 80px 40px;
+    }
+
+    // MOBILE
+    @media (min-width: 320px) and (max-width: 767px) {
+      padding: 40px 20px;
+    }
   }
 }

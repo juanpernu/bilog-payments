@@ -1,0 +1,139 @@
+@import "../../styles/variables";
+
+$card-shadow: 0 20px 50px -10px rgb(50 50 93 / 25%),
+  0 20px 50px -30px rgb(0 0 0 / 30%);
+
+.features {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 100px;
+
+  // TABLET
+  @media (min-width: 768px) and (max-width: 1024px) {
+    padding: 60px 40px 0;
+  }
+
+  // MOBILE
+  @media (min-width: 320px) and (max-width: 767px) {
+    padding: 60px 40px 0;
+  }
+
+  &-header {
+    margin: 0 0 60px;
+    text-align: center;
+
+    .copy {
+      margin: 0;
+      font-size: 19px;
+      color: $bilog-gray;
+      font-weight: 300;
+    }
+  }
+
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px 70px;
+    gap: 40px 70px;
+    margin-bottom: 40px;
+
+    // TABLET
+    @media (min-width: 768px) and (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    // MOBILE
+    @media (min-width: 320px) and (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+
+    .feature {
+      &-title {
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 32px;
+        color: $bilog-gray-dark;
+      }
+
+      &-desc {
+        font-size: 15px;
+        line-height: 24px;
+        color: $bilog-gray-dark;
+      }
+    }
+  }
+
+  .commons-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px 30px;
+    gap: 30px 30px;
+    margin-bottom: 40px;
+
+    // TABLET
+    @media (min-width: 768px) and (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    // MOBILE
+    @media (min-width: 320px) and (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+
+    .version-card {
+      padding: 20px;
+      background-color: $bilog-white;
+      box-shadow: $card-shadow;
+      border-radius: $border-radius;
+
+      .title {
+        margin: 0;
+      }
+
+      .version-link {
+        text-transform: uppercase;
+        font-size: 12px;
+        width: fit-content;
+        width: -moz-fit-content;
+        display: table;
+
+        p {
+          transition: all 0.1s ease-in-out;
+          color: $bilog-blue;
+          background-color: #dfeeff;
+          border-radius: 4px;
+          padding: 4px 8px;
+          margin: 20px 0 0;
+          &:hover {
+            color: $bilog-white;
+            background-color: $bilog-blue;
+          }
+        }
+      }
+    }
+  }
+
+  .separator {
+    text-align: center;
+    padding: 20px 0 60px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: #e6ebf1;
+      height: 2px;
+      width: 100%;
+      left: 0;
+      top: 44px;
+    }
+
+    p {
+      color: $bilog-gray;
+      background-color: #fff;
+      position: relative;
+      display: inline-block;
+      padding: 0 20px;
+    }
+  }
+}

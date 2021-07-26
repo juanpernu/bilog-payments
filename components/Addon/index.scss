@@ -1,60 +1,339 @@
 @import "../../styles/variables";
 
-.addon {
-  background-color: #fff;
-  box-shadow: $box-shadow;
-  border-radius: $border-radius;
-  padding: 40px;
+.addons {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 100px;
 
-  &-container {
-    display: flex;
-    .icon {
-      margin-right: 10px;
+  // TABLET
+  @media (min-width: 768px) and (max-width: 1023px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  // IPAD PRO
+  @media (min-width: 1024px) and (max-width: 1366px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  // MOBILE
+  @media (min-width: 320px) and (max-width: 767px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  &-header {
+    margin: 0 0 60px;
+    text-align: center;
+
+    .copy {
+      margin: 0;
+      font-size: 19px;
+      color: $bilog-gray;
+      font-weight: 300;
     }
-    .title {
-      font-weight: 600;
+  }
+
+  .items-container {
+    width: 100%;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+
+    // MOBILE
+    @media (min-width: 320px) and (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+
+    .addon-item {
+      display: grid;
+      grid-template-columns: 24px auto;
+      grid-column-gap: 18px;
+
+      // MOBILE
+      @media (min-width: 320px) and (max-width: 767px) {
+        grid-template-columns: 1fr;
+      }
+
+      .text {
+        margin: 0;
+        padding: 0;
+        color: #888;
+      }
+
+      .addon-icon {
+        // MOBILE
+        @media (min-width: 320px) and (max-width: 767px) {
+          margin-bottom: 8px;
+          left: -2px;
+          position: relative;
+        }
+      }
+    }
+  }
+
+  .addon,
+  .alwayson-addon {
+    background-color: #fff;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    padding: 40px;
+
+    // MOBILE
+    @media (min-width: 320px) and (max-width: 767px) {
+      padding: 20px;
+    }
+  }
+
+  .addon {
+    &-container {
+      display: flex;
+
+      // MOBILE
+      @media (min-width: 320px) and (max-width: 767px) {
+        flex-direction: column;
+      }
+
+      .icon {
+        margin-right: 20px;
+
+        // MOBILE
+        @media (min-width: 320px) and (max-width: 767px) {
+          margin: 0 0 8px;
+        }
+      }
+      .title {
+        font-weight: 600;
+        line-height: 28px;
+        color: $bilog-blue;
+        font-size: 21px;
+        line-height: 32px;
+        text-transform: uppercase;
+      }
+    }
+
+    &-description {
+      margin: 8px 0;
+      font-weight: 400;
+      font-size: $h3-fs;
       line-height: 28px;
-      color: $bilog-blue;
-      font-size: 21px;
-      line-height: 32px;
-      text-transform: uppercase;
+      color: #525f7f;
+
+      // MOBILE
+      @media (min-width: 320px) and (max-width: 767px) {
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: row;
+
+      // MOBILE
+      @media (min-width: 320px) and (max-width: 767px) {
+        flex-direction: column;
+      }
+
+      .pricing-container {
+        padding: 16px 0 16px 28px;
+        margin: 0 0 0 20px;
+        width: 230px;
+        border-left: 1px solid #eee;
+        display: flex;
+        flex-direction: column;
+
+        // MOBILE
+        @media (min-width: 320px) and (max-width: 767px) {
+          border: none;
+          border-top: 1px solid #eee;
+          padding: 16px 0 0;
+          margin: 20px 0 0;
+        }
+
+        p {
+          margin: 0;
+        }
+
+        .annotation {
+          font-size: 24px;
+          color: #24b47e;
+          display: block;
+          position: relative;
+
+          // MOBILE
+          @media (min-width: 320px) and (max-width: 767px) {
+            font-size: 32px;
+          }
+        }
+      }
+    }
+
+    & + .addon {
+      margin: 40px 0 0;
     }
   }
 
-  &-description {
-    margin: 8px 0;
-    font-weight: 400;
-    font-size: $h3-fs;
-    line-height: 28px;
-    color: #525f7f;
+  .alwayson-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 40px;
+
+    // MOBILE
+    @media (min-width: 320px) and (max-width: 767px) {
+      grid-template-columns: 1fr;
+      grid-gap: 40px 0;
+    }
   }
 
-  &-content {
-    display: flex;
-    flex-direction: row;
+  .alwayson-addon {
+    padding: 0;
 
-    .pricing-container {
-      padding: 16px 0 16px 28px;
-      margin: 0 0 0 20px;
-      width: 230px;
-      border-left: 1px solid #eee;
-      flex: content;
+    // TABLET
+    @media (min-width: 768px) and (max-width: 1023px) {
+      display: flex;
       flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .wrapper {
+      padding: 40px;
+    }
+
+    .addon-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: baseline;
+
+      // TABLET
+      @media (min-width: 768px) and (max-width: 1023px) {
+        display: flex;
+        flex-direction: column;
+      }
+
+      // IPAD PRO
+      @media (min-width: 1024px) and (max-width: 1366px) {
+        display: flex;
+      }
+
+      // MOBILE
+      @media (min-width: 320px) and (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .disclaimer {
+        margin-bottom: 5px;
+      }
+
+      .actions {
+        display: flex;
+        align-items: center;
+
+        .arrow-container {
+          width: 22px;
+          height: 22px;
+
+          .icon {
+            opacity: 0.8;
+            transition: opacity 0.2s ease;
+            &:hover {
+              opacity: 1;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .selection {
+          min-width: 98px;
+          text-align: center;
+          font-size: 40px;
+          font-weight: 100;
+          margin: 0 20px;
+          padding: 0;
+          color: $bilog-gray-dark;
+
+          // TABLET
+          @media (min-width: 768px) and (max-width: 1024px) {
+            font-size: 30px;
+            margin: 0 10px;
+          }
+
+          // MOBILE
+          @media (min-width: 320px) and (max-width: 767px) {
+            font-size: 30px;
+            margin: 0 10px;
+          }
+        }
+      }
+
+      .pricing-container {
+        margin: 0;
+        border-left: 1px solid #eee;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+
+        //TABLET
+        @media (min-width: 768px) and (max-width: 1023px) {
+          border-top: 1px solid #eee;
+          border-left: none;
+          padding: 20px 0 0 0;
+          margin: 10px 0 0 0;
+          width: 100%;
+        }
+
+        // MOBILE
+        @media (min-width: 320px) and (max-width: 767px) {
+          border-top: 1px solid #eee;
+          border-left: none;
+          padding: 20px 0 0 0;
+          margin: 10px 0 0 0;
+          width: 100%;
+        }
+
+        .annotation {
+          font-size: 40px;
+          color: $bilog-gray;
+
+          //TABLET
+          @media (min-width: 768px) and (max-width: 1024px) {
+            font-size: 30px;
+          }
+
+          &.selected {
+            color: #24b47e;
+          }
+        }
+      }
+    }
+
+    .suscribe-container {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      background-color: #f6f9fc;
+      color: $bilog-blue;
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 600;
+      transition: background-color 0.2s ease-in;
+
+      &:hover {
+        background-color: #eee;
+        cursor: pointer;
+      }
 
       p {
         margin: 0;
       }
-
-      .annotation {
-        font-size: 24px;
-        color: #24b47e;
-        display: block;
-        position: relative;
-      }
     }
-  }
-
-  & + .addon {
-    margin: 40px 0 0;
   }
 }

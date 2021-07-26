@@ -9,7 +9,23 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Bilog Payments</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta property="og:title" content="Bilog Payments" key="title" />
+        <meta
+          property="og:url"
+          content="https://payments.bilog.com.ar"
+          key="url"
+        />
+        <meta property="og:title" content="Bilog | Payments" key="title" />
+        <meta
+          property="og:description"
+          content="Hacemos fácil la gestión de la odontología. El software ideal para llevar la administración de tu consultorio o clínica."
+          key="description"
+        />
+        <meta property="og:locale" content="es-ar" />
+        <link
+          rel="canonical"
+          href="https://www.bilog.com.ar"
+          hreflang="es-ar"
+        />
         <link rel="shortcut icon" href="/favicon.jpg" />
         <link
           href="https://fonts.googleapis.com/css?family=Nunito:300,400,600&display=swap"

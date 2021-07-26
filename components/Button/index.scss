@@ -33,6 +33,7 @@ button {
 
     &.primary {
       background: rgb(24, 136, 255);
+      color: $bilog-white;
     }
   }
 
@@ -46,6 +47,12 @@ button {
     color: rgb(0, 0, 0);
     border: 1px solid rgb(255, 255, 255);
     background: rgb(255, 255, 255);
+  }
+
+  &.terciary {
+    color: rgb(0, 0, 0);
+    border: 1px solid #2af8f8;
+    background-color: #0de4e4;
   }
 
   &.suscription-button {

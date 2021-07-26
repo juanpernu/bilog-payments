@@ -2,10 +2,11 @@ const Default = {
   mensajeError: null,
   client: null,
   version: {
+    id: null,
     descripcion: "Todo lo que necesitas para tu negocio",
     rowversion: null,
     price: null,
-    video: "https://www.youtube.com/embed/-k0AR8PpKF8",
+    video: "https://www.youtube.com/embed/s9fn41E12no",
     descripcion:
       "Nuestro objetivo primordial es facilitar y potenciar tu negocio, por eso creamos el software ideal para llevar la administración de tu consultorio o clínica. Te ofrecemos un conjunto de herramientas que te ayuda a gestionar fácilmente tu consultorio en tiempo real, para que puedas enfocarte en lo que más te importa.",
     addons: {

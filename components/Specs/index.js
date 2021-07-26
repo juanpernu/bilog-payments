@@ -5,7 +5,7 @@ import Icon from "../Icon";
 import Button from "../Button";
 import Modal from "../Modal";
 
-const Specs = ({ price, desc, video, id }) => {
+const Specs = ({ price, desc, video, id, profCount }) => {
   const [showModal, setShowModal] = useState(false);
   return (
     <div className="specs-container">
@@ -33,7 +33,7 @@ const Specs = ({ price, desc, video, id }) => {
               <Value
                 text="Suscripción mensual"
                 className={id}
-                price={price.simple}
+                price={profCount > 5 ? price.simple : price.simple}
                 tooltipText="Valor mensual de la suscripción al servicio."
                 tooltip
               />

@@ -1,13 +1,28 @@
 @import "../../styles/variables";
 
 .specs-container {
-  width: 1200px;
+  max-width: 1200px;
   height: 437px;
   padding: 50px 0;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 80px;
+
+  // TABLET
+  @media (min-width: 768px) and (max-width: 1024px) {
+    grid-column-gap: 50px;
+    padding: 50px 40px;
+    height: auto;
+  }
+
+  // MOBILE
+  @media (min-width: 320px) and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 40px;
+    height: auto;
+  }
 
   .copy {
     font-size: $copy-fs;
@@ -31,12 +46,42 @@
 
       .detached-prices {
         display: flex;
+
+        // TABLET
+        @media (min-width: 768px) and (max-width: 1023px) {
+          flex-direction: column;
+        }
+
+        // IPAD PRO
+        @media (min-width: 1024px) and (max-width: 1366px) {
+          flex-direction: row;
+        }
+
+        // MOBILE
+        @media (min-width: 320px) and (max-width: 767px) {
+          flex-direction: column;
+        }
       }
 
       .price-wrapper {
         margin: 0 30px 20px 0;
         padding-right: 30px;
-        border-right: 2px solid #ddd;
+        border-right: 1px solid #ddd;
+
+        // TABLET
+        @media (min-width: 768px) and (max-width: 1023px) {
+          padding: 0 0 20px 0;
+          border: none;
+          border-bottom: 1px solid #ddd;
+        }
+
+        // MOBILE
+        @media (min-width: 320px) and (max-width: 767px) {
+          padding: 0 0 20px 0;
+          margin: 0 0 15px;
+          border: none;
+          border-bottom: 1px solid #ddd;
+        }
 
         &:last-of-type {
           margin: 0;
@@ -73,6 +118,11 @@
               padding: 10px;
               transition: all 0.2s ease-in;
 
+              // TABLET
+              @media (min-width: 768px) and (max-width: 1024px) {
+                width: 200px;
+              }
+
               p {
                 margin: 0;
                 padding: 0;
@@ -86,7 +136,7 @@
             color: $small;
           }
 
-          .smallpremium {
+          .smallpre {
             color: $smallpremium;
           }
 
@@ -125,6 +175,13 @@
 
         &-button {
           display: flex;
+        }
+      }
+
+      // TABLET
+      @media (min-width: 768px) and (max-width: 1024px) {
+        iframe {
+          min-height: 300px;
         }
       }
     }
