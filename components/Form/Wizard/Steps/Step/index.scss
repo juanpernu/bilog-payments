@@ -16,7 +16,8 @@
   }
 }
 
-@media only screen and (max-width: 750px) {
+// MOBILE
+@media (min-width: 320px) and (max-width: 767px) {
   .step {
     &-fields {
       padding: 0 30px;
@@ -28,25 +29,31 @@
   }
 }
 
-@media only screen and (min-width: 751px) {
+@media only screen and (min-width: 768px) {
   .step {
     &-container {
       max-width: 1200px;
 
       .error {
-        margin-left: 10px;
+        margin: 20px 0 0;
       }
     }
     &-fields {
-      padding: 0 20px;
+      padding: 60px 20px 0;
       display: flex;
-      align-items: center;
+      grid-gap: 40px;
       width: 100%;
     }
     &-question {
-      margin-right: 20px;
       font-size: $font-size-28;
-      font-weight: $fw-regular;
+      max-width: 70%;
+    }
+
+    &-hint {
+      margin: 10px 0 0;
+      font-size: 16px;
+      font-weight: 100;
+      color: $bilog-gray-dark;
     }
   }
 }

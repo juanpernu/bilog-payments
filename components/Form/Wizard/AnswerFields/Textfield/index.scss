@@ -12,6 +12,12 @@
   letter-spacing: normal;
   color: $bilog-black;
   cursor: pointer;
+
+  &::placeholder {
+    color: $bilog-gray;
+    font-weight: 100;
+    font-size: 16px;
+  }
 }
 
 @media only screen and (max-width: 750px) {
@@ -25,8 +31,7 @@
 @media only screen and (min-width: 751px) {
   .textfield-input {
     max-width: 180px;
-    margin: 25px 0;
     height: 35px;
-    font-size: $font-size-20;
+    font-size: $font-size-16;
   }
 }

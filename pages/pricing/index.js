@@ -1,6 +1,6 @@
 import Wizard from "../../components/Form/Wizard";
 
-const Pricing = ({ version, value }) => {
+const Pricing = () => {
   return (
     <section className="pricing">
       <Wizard />
