@@ -1,9 +1,17 @@
 .pricing {
-  @media only screen and (min-height: 602px) {
+  & ~ .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 750px) {
     & ~ .footer {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
+      position: static;
+    }
+
+    .subtitle {
+      font-size: 24px;
     }
   }
 }

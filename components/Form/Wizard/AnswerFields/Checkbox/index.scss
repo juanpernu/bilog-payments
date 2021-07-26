@@ -4,6 +4,11 @@
   &-container {
     height: 30px;
 
+    // MOBILE
+    @media (min-width: 320px) and (max-width: 767px) {
+      margin-top: 15px;
+    }
+
     .switch {
       position: relative;
       display: inline-block;
