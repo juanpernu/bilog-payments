@@ -1,4 +1,8 @@
-@import '../../../../styles/variables';
+@import "../../../../styles/variables";
+
+.nav {
+  pointer-events: none;
+}
 
 @media only screen and (max-width: 750px) {
   .nav {
@@ -15,12 +19,11 @@
       font-size: 36px;
       line-height: 1;
       margin: 0 15px;
-      opacity: .4;
+      opacity: 0.4;
       text-shadow: none;
-      transition: opacity 1s ease,
-          text-shadow 1s ease;
+      transition: opacity 1s ease, text-shadow 1s ease;
       will-change: opacity, text-shadow;
-    
+
       &.active {
         color: $bilog-blue-light;
         opacity: 1;
@@ -45,12 +48,11 @@
       font-size: 36px;
       line-height: 1;
       margin: 0 15px;
-      opacity: .4;
+      opacity: 0.4;
       text-shadow: none;
-      transition: opacity 1s ease,
-          text-shadow 1s ease;
+      transition: opacity 1s ease, text-shadow 1s ease;
       will-change: opacity, text-shadow;
-    
+
       &.active {
         color: $bilog-blue-light;
         opacity: 1;

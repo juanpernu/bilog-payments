@@ -1,4 +1,4 @@
-const Textfield = ({ type, id, name, fieldKey, onChange }) => {
+const Textfield = ({ type, id, name, fieldKey, placeholder, onChange }) => {
   const onChangeHandler = (e) => onChange(fieldKey, e.target.value);
   return (
     <input
@@ -6,6 +6,7 @@ const Textfield = ({ type, id, name, fieldKey, onChange }) => {
       type={type}
       id={id}
       name={name}
+      placeholder={placeholder}
       onChange={onChangeHandler}
     />
   );

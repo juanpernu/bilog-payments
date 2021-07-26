@@ -1,5 +1,5 @@
-@import '../../Stats/index.scss';
-@import '../../../../../styles/variables';
+@import "../../Stats/index.scss";
+@import "../../../../../styles/variables";
 
 .step {
   &-container {
@@ -8,6 +8,11 @@
     margin: 0 auto;
     position: relative;
     align-items: flex-start;
+
+    .error {
+      color: $bilog-red;
+      font-weight: $fw-bold;
+    }
   }
 }
 
@@ -27,6 +32,10 @@
   .step {
     &-container {
       max-width: 1200px;
+
+      .error {
+        margin-left: 10px;
+      }
     }
     &-fields {
       padding: 0 20px;

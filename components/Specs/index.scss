@@ -118,9 +118,7 @@
               padding: 10px;
               transition: all 0.2s ease-in;
 
-              /* 
-                ##Device = Tablets, Ipads (portrait)
-              */
+              // TABLET
               @media (min-width: 768px) and (max-width: 1024px) {
                 width: 200px;
               }
@@ -180,9 +178,7 @@
         }
       }
 
-      /* 
-        ##Device = Tablets, Ipads (portrait)
-      */
+      // TABLET
       @media (min-width: 768px) and (max-width: 1024px) {
         iframe {
           min-height: 300px;

@@ -1,4 +1,4 @@
-@import '../../../../../styles/variables';
+@import "../../../../../styles/variables";
 
 .textfield-input {
   padding: 0 5px;
@@ -16,7 +16,7 @@
 
 @media only screen and (max-width: 750px) {
   .textfield-input {
-    width: 130px;
+    width: 160px;
     height: auto;
     font-size: $font-size-22;
   }
@@ -24,7 +24,7 @@
 
 @media only screen and (min-width: 751px) {
   .textfield-input {
-    max-width: 150px;
+    max-width: 180px;
     margin: 25px 0;
     height: 35px;
     font-size: $font-size-20;
