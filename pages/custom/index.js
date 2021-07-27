@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Cover from "../../components/Cover";
 import Card from "../../components/Card";
 import Icon from "../../components/Icon";
-import Button from "../../components/Button";
+import { Button } from "../../components/Buttons";
 
 const Custom = () => {
   const router = useRouter();
