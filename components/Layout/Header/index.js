@@ -12,7 +12,7 @@ const Header = () => {
         </span>
         <span className="menu-item">
           <Link href="/pricing">
-            <a className="link">Precios</a>
+            <a className="link">Cotizá</a>
           </Link>
           <Link href="/versions">
             <a className="link">Versiones</a>
