@@ -1,4 +1,4 @@
-import Button from "../../../Button";
+import { Button } from "../../../Buttons";
 
 const Stats = ({ nextStep, previousStep, totalSteps, stepNumber, submit }) => {
   const submitHandler = () => {
