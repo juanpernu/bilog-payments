@@ -1,11 +1,14 @@
 import React, { useState } from "react";
+import { useRouter } from "next/router";
 import StepWizard from "react-step-wizard";
 import { Steps, Step } from "./Steps";
 import Nav from "./Nav";
 import { saveNewBilling } from "../../../services/pricingService";
+import { setUrlVersions } from "../../../utils";
 import initialState from "../../../content/userDataInitialState";
 
 function Wizard() {
+  const router = useRouter();
   const totalSteps = Steps.length;
   const [userdata, setUserdata] = useState(initialState);
   const updateUserData = (key, value) =>
@@ -14,7 +17,11 @@ function Wizard() {
       [key]: value,
     });
 
-  const submit = () => saveNewBilling(userdata);
+  const submit = async () => {
+    const data = await saveNewBilling(userdata);
+    const url = setUrlVersions(data);
+    router.push(url);
+  };
 
   return (
     <StepWizard nav={<Nav />}>

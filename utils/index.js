@@ -132,3 +132,8 @@ export const billingInitialState = {
 };
 
 export const splitAddons = (addons) => addons.split(",");
+
+export const setUrlVersions = (data) => {
+  const { version, client } = data;
+  return `/versions?version=${version.id}&addons=&profCount=${client.prof_count_number}&rowVersion=${version.rowversion}`;
+};
