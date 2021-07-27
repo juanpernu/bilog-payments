@@ -12,15 +12,22 @@ const CoverSplit = ({ url }) => {
   };
 
   return (
-    <div className="cover-split--wrapper">
-      <div className="cover-split--container">
-        <div className="left-content">
-          <h2 className="left-title">Cotizá tu plan y evaluá cuál es la mejor opción para cuidar tu salud</h2>
-          <p className="left-copy">Te invitamos a simular tu cuota y a conocer la cobertura de nuestros planes.</p>
+    <div className="cover-split">
+      <div className="cover-split-container">
+        <div className="content left">
+          <h2 className="title">
+            Cotizá tu plan y evaluá cuál es la mejor opción para cuidar tu salud
+          </h2>
+          <p className="copy">
+            Te invitamos a simular tu cuota y a conocer la cobertura de nuestros
+            planes.
+          </p>
         </div>
-        <div className="right-content">
-          <h2 className="right-title">¿Queres saber cual es la versión que más te conviene?</h2>
-          <Button modifier="terciary" onClick={() => handleOnClick()}>
+        <div className="content right">
+          <h2 className="title">
+            ¿Queres saber cual es la versión que más te conviene?
+          </h2>
+          <Button modifier="secondary" onClick={() => handleOnClick()}>
             ¡Cotizá ahora!
           </Button>
         </div>

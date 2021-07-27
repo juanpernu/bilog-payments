@@ -1,5 +1,5 @@
 import { formatVersion, splitAddons } from "../../utils";
-import Button from "../Button";
+import { Button } from "../Buttons";
 import Icon from "../Icon";
 
 const Billing = ({ billing, selectedAddons }) => {

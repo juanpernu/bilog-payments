@@ -1,5 +1,5 @@
 const Button = ({
-  modifier,
+  modifier = "primary",
   className,
   fullWidth,
   onClick,
