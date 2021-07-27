@@ -57,7 +57,7 @@ const Steps = [
       placeholder: "(+54) (011) 4444-4444",
     },
     {
-      question: "¿Cuál es su profesión?",
+      question: "¿Cuál es tu profesión?",
       field: "dropdown",
       key: "profession",
     },

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import StepWizard from "react-step-wizard";
 import { Steps, Step } from "./Steps";
 import Nav from "./Nav";
-import { savePrice } from "../../../services/pricingService";
+import { saveNewBilling } from "../../../services/pricingService";
 import initialState from "../../../content/userDataInitialState";
 
 function Wizard() {
@@ -14,7 +14,7 @@ function Wizard() {
       [key]: value,
     });
 
-  const submit = () => console.log(userdata);
+  const submit = () => saveNewBilling(userdata);
 
   return (
     <StepWizard nav={<Nav />}>

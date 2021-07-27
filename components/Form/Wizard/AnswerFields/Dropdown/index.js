@@ -5,9 +5,9 @@ const Dropdown = ({ onChange, fieldKey }) => {
       <option value="" selected disabled>
         Seleciona una
       </option>
-      <option value="dentist">Odontólogo/a</option>
-      <option value="secret">Secretario/a</option>
-      <option value="admin">Administrador/a</option>
+      <option value="Odontólogo/a">Odontólogo/a</option>
+      <option value="Secretario/a">Secretario/a</option>
+      <option value="Administrador/a">Administrador/a</option>
     </select>
   );
 };

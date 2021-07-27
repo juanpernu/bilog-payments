@@ -2,6 +2,7 @@ import axios from "axios";
 
 export const axiosInstance = axios.create({
   baseURL: "https://apibr.bilog.com.ar/",
+  headers: { "Content-Type": "application/json" },
   // `transformResponse` allows changes to the response data to be made before
   // it is passed to then/catch
   transformResponse: [
@@ -24,23 +25,20 @@ export const getVersion = (pricing) => {
     prof_count_number,
   } = pricing;
 
-  let versionId;
-
-  if (prof_count_number === 1 && prof_payment) versionId = "full";
+  if (parseInt(prof_count_number) >= 10) return "custom";
+  if (parseInt(prof_count_number) === 1 && prof_payment) return "full";
   if (
-    prof_count_number > 1 &&
+    parseInt(prof_count_number) > 1 &&
     (prof_payment || add_administration || add_auditory || os_payment)
   )
-    versionId = "full";
+    return "full";
   if (
-    prof_count_number === 1 &&
+    parseInt(prof_count_number) === 1 &&
     (add_administration || add_auditory || os_payment)
   )
-    versionId = "standard";
-  if (prof_count_number > 1) versionId = "smallpremium";
-  if (prof_count_number === 1) versionId = "small";
-
-  return versionId;
+    return "standard";
+  if (parseInt(prof_count_number) > 1) return "smallpre";
+  if (parseInt(prof_count_number) === 1) return "small";
 };
 
 export const formatPricing = (pricing) => {
@@ -54,18 +52,16 @@ export const formatPricing = (pricing) => {
     name,
     phone,
     prof_count_number,
-    pc_count_number,
     profession,
   } = pricing;
 
   return {
-    prof_count_number,
-    pc_count_number,
     client: {
       email,
       name,
       phone,
       profession,
+      prof_count_number,
     },
     version: {
       id: getVersion(pricing),
