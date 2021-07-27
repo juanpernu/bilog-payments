@@ -1,8 +1,13 @@
 const Dropdown = ({ onChange, fieldKey }) => {
   const onChangeHandler = (e) => onChange(fieldKey, e.target.value);
   return (
-    <select id="profession" name="profession" onChange={onChangeHandler}>
-      <option value="" selected disabled>
+    <select
+      id="profession"
+      name="profession"
+      defaultValue="empty"
+      onChange={onChangeHandler}
+    >
+      <option value="empty" disabled>
         Seleciona una
       </option>
       <option value="Odontólogo/a">Odontólogo/a</option>

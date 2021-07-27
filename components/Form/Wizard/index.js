@@ -22,6 +22,7 @@ function Wizard() {
         const stepNumber = i + 1;
         return (
           <Step
+            key={i}
             step={step}
             stepNumber={stepNumber}
             totalSteps={totalSteps}

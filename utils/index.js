@@ -2,7 +2,9 @@ import axios from "axios";
 
 export const axiosInstance = axios.create({
   baseURL: "https://apibr.bilog.com.ar/",
-  headers: { "Content-Type": "application/json" },
+  headers: {
+    "Content-Type": "application/json",
+  },
   // `transformResponse` allows changes to the response data to be made before
   // it is passed to then/catch
   transformResponse: [
@@ -66,11 +68,11 @@ export const formatPricing = (pricing) => {
     version: {
       id: getVersion(pricing),
       addons: {
-        add_administration,
-        add_auditory,
-        add_osde,
-        add_sms,
-        add_facturation,
+        add_administration: add_administration.toString(),
+        add_auditory: add_auditory.toString(),
+        add_osde: add_osde.toString(),
+        add_sms: add_sms.toString(),
+        add_facturation: add_facturation.toString(),
       },
     },
   };
