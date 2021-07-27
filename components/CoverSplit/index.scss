@@ -1,0 +1,83 @@
+@import "../../styles/variables";
+
+.cover-split {
+  width: 100%;
+  background: rgb(231, 237, 252);
+  background: linear-gradient(
+    90deg,
+    rgba(231, 237, 252, 1) 58%,
+    rgba(60, 93, 170, 1) 58%,
+    rgba(60, 93, 170, 1) 100%
+  );
+  // MOBILE
+  @media (min-width: 320px) and (max-width: 767px) {
+    width: 100%;
+    background: $bilog-white;
+  }
+
+  &-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 250px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    // MOBILE
+    @media (min-width: 320px) and (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+
+    .content {
+      height: 100%;
+
+      &.left {
+        background: $bilog-gray-blue-light;
+        padding: 30px 60px 30px 0;
+
+        // MOBILE
+        @media (min-width: 320px) and (max-width: 767px) {
+          padding: 20px 40px;
+        }
+      }
+
+      &.right {
+        background: rgb(75, 135, 239);
+        background: linear-gradient(
+          90deg,
+          rgba(75, 135, 239, 1) 0%,
+          rgba(60, 93, 170, 1) 100%
+        );
+        border-bottom-left-radius: 60px;
+        padding: 30px 0 30px 60px;
+
+        // MOBILE
+        @media (min-width: 320px) and (max-width: 767px) {
+          border-bottom-right-radius: 30px;
+          border-bottom-left-radius: 30px;
+          padding: 20px 40px;
+        }
+
+        .title {
+          color: $bilog-white;
+          margin-bottom: 45px;
+
+          // MOBILE
+          @media (min-width: 320px) and (max-width: 767px) {
+            margin-bottom: 30px;
+          }
+        }
+      }
+
+      .title {
+        font-size: $font-size-40;
+      }
+
+      .copy {
+        color: $bilog-gray-dark;
+        font-size: $font-size-20;
+        line-height: 1.5;
+        font-weight: $fw-light;
+      }
+    }
+  }
+}
