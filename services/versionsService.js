@@ -2,7 +2,7 @@ import { axiosInstance } from "../utils";
 import Content from "../content/versions";
 
 //TODO: We shouldn't use this
-const versions = ["small", "smallpre", "std", "full"];
+const versions = ["small", "smallpre", "standard", "full"];
 
 export const getVersionContent = async (version) => {
   if (versions.includes(version)) {

@@ -26,7 +26,6 @@ button {
   &.full-width {
     width: 100%;
     margin: 20px auto;
-    
   }
 
   // MOBILE
@@ -34,12 +33,13 @@ button {
     width: 100%;
     margin-bottom: 10px;
   }
-  
+
   &:hover {
     transform: translateY(-5px);
 
     &.primary {
       background: rgb(24, 136, 255);
+      color: $bilog-white;
     }
   }
 
@@ -56,9 +56,9 @@ button {
   }
 
   &.terciary {
-    color: #4b87ef;
-    background: #fff;
-    border: 1px solid #007aff;
+    color: rgb(0, 0, 0);
+    border: 1px solid #2af8f8;
+    background-color: #0de4e4;
   }
 
   &.suscription-button {

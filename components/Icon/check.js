@@ -4,6 +4,7 @@ const Check = ({
   width = 24,
   height = 24,
   colorFill = "#5697FA",
+  colorStroke = "#fff",
   className,
 }) => (
   <svg
@@ -22,7 +23,7 @@ const Check = ({
       ></path>
       <path
         d="M13 16.3333L15.9167 19.25L22.1667 13"
-        stroke="#fff"
+        stroke={colorStroke}
         strokeWidth="2"
         strokeLinecap="round"
       ></path>

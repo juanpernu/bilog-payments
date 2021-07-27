@@ -79,3 +79,58 @@ export const formatPricing = (pricing) => {
     },
   };
 };
+
+export const formatVersion = (version) => {
+  const versions = {
+    small: "Small",
+    smallpre: "Small Premium",
+    standard: "Standard",
+    full: "Full",
+  };
+
+  return versions[version];
+};
+
+export const addonPriceMapper = (type, obj) => {
+  const quantity = [250, 500, 1500];
+  const mapped = obj[type].map((item, index) => {
+    return {
+      quantity: quantity[index],
+      price: item.price,
+    };
+  });
+
+  return mapped;
+};
+
+export const billingInitialState = {
+  pricing: {
+    version: null,
+    price: {
+      initial: "",
+      simple: "",
+      complex: "",
+    },
+    addons: {
+      add_administration: false,
+      add_auditory: false,
+      add_osde: false,
+    },
+    sms: [
+      {
+        id: null,
+        price: "",
+      },
+    ],
+    emkt: [
+      {
+        id: null,
+        price: "",
+      },
+    ],
+  },
+  profCount: 1,
+  selected: { sms: false, emkt: false },
+};
+
+export const splitAddons = (addons) => addons.split(",");

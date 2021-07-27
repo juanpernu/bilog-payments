@@ -1,4 +1,4 @@
-const Card = ({ children, className }) => {
+const Card = ({ children, className = "" }) => {
   return <div className={`product-card ${className}`}>{children}</div>;
 };
 
