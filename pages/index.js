@@ -3,7 +3,9 @@ import { useRouter } from "next/router";
 import { Context } from "./context";
 
 import Card from "../components/Card";
-import Button from "../components/Button";
+import Button from "../components/Buttons/Button";
+import BannerCta from "../components/BannerCta";
+import CoverSplit from "../components/CoverSplit";
 
 const Index = () => {
   const ProductCardsContent = useContext(Context);
@@ -20,12 +22,15 @@ const Index = () => {
   };
 
   return (
-    <section className="billing-plans">
-      <h2 className="title">Planes de suscripción</h2>
-      <p className="copy">
-        Bilog es perfecto para clínicas de cualquier tamaño
-      </p>
-      <div className="billing-plans--cards">
+    <section className="payments-home">
+      <CoverSplit url="/pricing" />
+      <BannerCta
+        title="¿Queres saber todo acerca de cada versión?"
+        buttonText="Ir a las versiones"
+        buttonMod="terciary"
+        url="/versions"
+      />
+      <div className="payments-home--cards">
         {ProductCardsContent.map((card) => (
           <Card>
             <div className="card-content">
@@ -34,6 +39,7 @@ const Index = () => {
               <p className="text">{card.text}</p>
             </div>
             <Button
+              modifier="primary"
               className="suscription-button"
               text="Suscribirse"
               onClick={() => handleOnClick(card.plan)}

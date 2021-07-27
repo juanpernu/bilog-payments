@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 
 const Header = () => {
@@ -13,6 +13,9 @@ const Header = () => {
         <span className="menu-item">
           <Link href="/pricing">
             <a className="link">Precios</a>
+          </Link>
+          <Link href="/versions">
+            <a className="link">Versiones</a>
           </Link>
         </span>
       </nav>

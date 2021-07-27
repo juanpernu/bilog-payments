@@ -38,28 +38,10 @@ a {
   align-items: center;
 }
 
-.billing-plans {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-
-  .title {
-    font-size: 40px;
-    line-height: 1;
-    font-weight: 600;
-    margin: 20px 0;
-  }
-
-  .copy {
-    font-weight: 300;
-    color: #505656;
-    font-size: 20px;
-    line-height: 1.5;
-    margin: 0;
-  }
-
+.payments-home {
   &--cards {
-    margin-top: 60px;
+    max-width: 1200px;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 20px;
