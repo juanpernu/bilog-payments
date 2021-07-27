@@ -1,6 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
-import Button from "../Buttons/Button";
+import { Button } from "../Buttons";
 
 const CoverSplit = ({ url }) => {
   const router = useRouter();
