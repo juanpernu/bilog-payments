@@ -8,9 +8,10 @@ const Step = (props) => {
   const [errors, setErrors] = useState({});
   const nextStepHandler = () => {
     const errors = useValidations(userdata, stepNumber);
-    if (!errors && stepNumber < totalSteps) {
+    if (!errors) {
       setErrors({});
-      return props.nextStep();
+      if (stepNumber < totalSteps) return props.nextStep();
+      return submit();
     }
     setErrors(errors);
   };
@@ -40,7 +41,6 @@ const Step = (props) => {
       })}
       <Stats
         stepNumber={stepNumber}
-        submit={submit}
         totalSteps={totalSteps}
         {...props}
         nextStep={nextStepHandler}
