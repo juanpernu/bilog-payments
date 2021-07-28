@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps }) {
           href="https://www.bilog.com.ar"
           hreflang="es-ar"
         />
-        <link rel="shortcut icon" href="/favicon.jpg" />
+        <link rel="shortcut icon" href="/favicon.png" />
         <link
           href="https://fonts.googleapis.com/css?family=Nunito:300,400,600&display=swap"
           rel="stylesheet"
