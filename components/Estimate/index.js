@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import Button from "../Button";
+import { Button } from "../Buttons";
 
 const Estimate = () => {
   const router = useRouter();

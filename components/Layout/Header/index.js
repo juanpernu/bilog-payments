@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -12,12 +12,15 @@ const Header = () => {
         </span>
         <span className="menu-item">
           <Link href="/pricing">
-            <a className="link">Precios</a>
+            <a className="link">Cotizá</a>
+          </Link>
+          <Link href="/versions">
+            <a className="link">Versiones</a>
           </Link>
         </span>
       </nav>
     </header>
-  )
+  );
 };
 
 export default Header;

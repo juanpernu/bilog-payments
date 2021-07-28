@@ -2,7 +2,7 @@ import { Fragment, useState } from "react";
 import Value from "./value";
 import Video from "../Video";
 import Icon from "../Icon";
-import Button from "../Button";
+import { Button } from "../Buttons";
 import Modal from "../Modal";
 
 const Specs = ({ price, desc, video, id, profCount }) => {
