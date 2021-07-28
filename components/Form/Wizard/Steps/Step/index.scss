@@ -47,8 +47,11 @@
     &-fields {
       padding: 60px 20px 0;
       display: flex;
-      grid-gap: 40px;
       width: 100%;
+
+      .step-field {
+        margin-left: 40px;
+      }
     }
     &-question {
       font-size: $font-size-28;
