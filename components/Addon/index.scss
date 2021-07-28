@@ -229,43 +229,55 @@
         margin-bottom: 5px;
       }
 
-      .actions {
-        display: flex;
-        align-items: center;
-
-        .arrow-container {
-          width: 22px;
-          height: 22px;
-
-          .icon {
-            opacity: 0.8;
-            transition: opacity 0.2s ease;
-            &:hover {
-              opacity: 1;
-              cursor: pointer;
-            }
-          }
+      .actions-container {
+        // TABLET
+        @media (min-width: 768px) and (max-width: 1023px) {
+          padding-right: 30px;
         }
 
-        .selection {
-          min-width: 98px;
-          text-align: center;
-          font-size: 40px;
-          font-weight: 100;
-          margin: 0 20px;
-          padding: 0;
-          color: $bilog-gray-dark;
+        // IPAD PRO
+        @media (min-width: 1024px) and (max-width: 1366px) {
+          padding-right: 30px;
+        }
 
-          // TABLET
-          @media (min-width: 768px) and (max-width: 1024px) {
-            font-size: 30px;
-            margin: 0 10px;
+        .actions {
+          display: flex;
+          align-items: center;
+
+          .arrow-container {
+            width: 22px;
+            height: 22px;
+
+            .icon {
+              opacity: 0.8;
+              transition: opacity 0.2s ease;
+              &:hover {
+                opacity: 1;
+                cursor: pointer;
+              }
+            }
           }
 
-          // MOBILE
-          @media (min-width: 320px) and (max-width: 767px) {
-            font-size: 30px;
-            margin: 0 10px;
+          .selection {
+            min-width: 98px;
+            text-align: center;
+            font-size: 40px;
+            font-weight: 100;
+            margin: 0 20px;
+            padding: 0;
+            color: $bilog-gray-dark;
+
+            // TABLET
+            @media (min-width: 768px) and (max-width: 1024px) {
+              font-size: 30px;
+              margin: 0 10px;
+            }
+
+            // MOBILE
+            @media (min-width: 320px) and (max-width: 767px) {
+              font-size: 30px;
+              margin: 0 10px;
+            }
           }
         }
       }

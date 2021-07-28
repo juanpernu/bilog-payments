@@ -17,6 +17,7 @@ const AlwaysOnAddons = ({ addons, onChange }) => {
           const item = AlwaysOn[ad];
           return (
             <AlwaysOnItem
+              key={i}
               addKey={ad}
               onChange={onChange}
               title={item.title}

@@ -26,8 +26,8 @@ const Custom = () => {
           />
           <h3 className="subtitle">El formulario se envió correctamente</h3>
           <p className="text">
-            Nos vamos a poner en contacto con vos a la brevedad. Gracias por la
-            confianza y tu interés interés en Bilog.
+            Te vamos a llamar a la brevedad. Gracias por la confianza y tu
+            interés interés en Bilog.
           </p>
         </Card>
       </Cover>

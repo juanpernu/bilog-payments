@@ -133,7 +133,15 @@ export const billingInitialState = {
 
 export const splitAddons = (addons) => addons.split(",");
 
-export const setUrlVersions = (data) => {
+export const setUrlVersions = (data, formData) => {
   const { version, client } = data;
-  return `/versions?version=${version.id}&addons=&profCount=${client.prof_count_number}&rowVersion=${version.rowversion}`;
+  const { add_administration, add_auditory, add_osde } = formData;
+
+  let addons = [];
+  if (add_administration) addons.push("adm");
+  if (add_auditory) addons.push("aud");
+  if (add_osde) addons.push("osde");
+
+  if (client.prof_count_number >= 10) return "/custom";
+  return `/versions?version=${version.id}&addons=${addons}&profCount=${client.prof_count_number}&rowVersion=${version.rowversion}`;
 };

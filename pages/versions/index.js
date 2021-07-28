@@ -74,7 +74,7 @@ export async function getServerSideProps(req, res) {
   const {
     version = "default",
     addons = null,
-    profCount = 1,
+    profCount = null,
     shallow = false,
   } = req.query;
   const { data: content } = await getVersionContent(version);

@@ -7,7 +7,7 @@ import { saveNewBilling } from "../../../services/pricingService";
 import { setUrlVersions } from "../../../utils";
 import initialState from "../../../content/userDataInitialState";
 
-function Wizard() {
+const Wizard = ({ onChange }) => {
   const router = useRouter();
   const totalSteps = Steps.length;
   const [userdata, setUserdata] = useState(initialState);
@@ -18,8 +18,9 @@ function Wizard() {
     });
 
   const submit = async () => {
+    onChange();
     const data = await saveNewBilling(userdata);
-    const url = setUrlVersions(data);
+    const url = setUrlVersions(data, userdata);
     router.push(url);
   };
 
@@ -41,6 +42,6 @@ function Wizard() {
       })}
     </StepWizard>
   );
-}
+};
 
 export default Wizard;
