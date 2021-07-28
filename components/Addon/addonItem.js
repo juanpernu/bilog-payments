@@ -19,8 +19,8 @@ const Addon = ({ title, description, icon, items, price, color }) => {
       <h3 className="addon-description">{description}</h3>
       <div className="addon-content">
         <div className="items-container">
-          {items.map((i) => (
-            <Item icon={i.icon} text={i.text} />
+          {items.map((i, index) => (
+            <Item key={index} icon={i.icon} text={i.text} />
           ))}
         </div>
         <div className="pricing-container">

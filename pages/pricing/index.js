@@ -1,9 +1,13 @@
+import { useState } from "react";
 import Wizard from "../../components/Form/Wizard";
+import Loading from "../../components/Loading";
 
-const Pricing = ({ version, value }) => {
+const Pricing = () => {
+  const [loading, setLoading] = useState(false);
   return (
     <section className="pricing">
-      <Wizard />
+      {loading && <Loading />}
+      <Wizard onChange={() => setLoading(true)} />
     </section>
   );
 };

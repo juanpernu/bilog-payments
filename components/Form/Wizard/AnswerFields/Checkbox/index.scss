@@ -1,9 +1,13 @@
-@import '../../../../../styles/variables';
+@import "../../../../../styles/variables";
 
 .checkbox {
   &-container {
-    margin: 22px 0;
     height: 30px;
+
+    // MOBILE
+    @media (min-width: 320px) and (max-width: 767px) {
+      margin-top: 15px;
+    }
 
     .switch {
       position: relative;
@@ -20,8 +24,8 @@
         right: 0;
         bottom: 0;
         background-color: $bilog-gray;
-        -webkit-transition: .4s;
-        transition: .4s;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
         border-radius: 34px;
 
         &:before {
@@ -32,8 +36,8 @@
           left: 4px;
           bottom: 4px;
           background-color: $bilog-white;
-          -webkit-transition: .4s;
-          transition: .4s;
+          -webkit-transition: 0.4s;
+          transition: 0.4s;
           border-radius: 50%;
         }
       }
@@ -41,13 +45,13 @@
       input {
         position: absolute;
         visibility: hidden;
-      
+
         &:focus + .slider {
           box-shadow: 0 0 1px $bilog-blue-light;
         }
         &:checked + .slider {
           background-color: $bilog-blue-light;
-      
+
           &:before {
             -webkit-transform: translateX(26px);
             -ms-transform: translateX(26px);

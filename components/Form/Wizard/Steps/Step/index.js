@@ -8,9 +8,10 @@ const Step = (props) => {
   const [errors, setErrors] = useState({});
   const nextStepHandler = () => {
     const errors = useValidations(userdata, stepNumber);
-    if (!errors && stepNumber < totalSteps) {
+    if (!errors) {
       setErrors({});
-      return props.nextStep();
+      if (stepNumber < totalSteps) return props.nextStep();
+      return submit();
     }
     setErrors(errors);
   };
@@ -20,22 +21,26 @@ const Step = (props) => {
       {step.map((stepItem, i) => {
         return (
           <div key={i} className="step-fields">
-            <p className="step-question">{stepItem.question}</p>
-            <AnswerField
-              field={stepItem.field}
-              fieldKey={stepItem.key}
-              onChange={update}
-              placeholder={stepItem.placeholder}
-            />
-            {errors[stepItem.key] && (
-              <p className="error">{errors[stepItem.key]}</p>
-            )}
+            <div className="step-question">
+              <p className="subtitle">{stepItem.question}</p>
+              {stepItem.hint && <p className="disclaimer">{stepItem.hint}</p>}
+            </div>
+            <div className="step-field">
+              <AnswerField
+                field={stepItem.field}
+                fieldKey={stepItem.key}
+                onChange={update}
+                placeholder={stepItem.placeholder}
+              />
+              {errors[stepItem.key] && (
+                <p className="error">{errors[stepItem.key]}</p>
+              )}
+            </div>
           </div>
         );
       })}
       <Stats
         stepNumber={stepNumber}
-        submit={submit}
         totalSteps={totalSteps}
         {...props}
         nextStep={nextStepHandler}

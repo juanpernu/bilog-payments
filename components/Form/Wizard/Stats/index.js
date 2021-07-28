@@ -1,18 +1,14 @@
 import { Button } from "../../../Buttons";
 
-const Stats = ({ nextStep, previousStep, totalSteps, stepNumber, submit }) => {
-  const submitHandler = () => {
-    nextStep();
-    submit();
-  };
+const Stats = ({ nextStep, previousStep, totalSteps, stepNumber }) => {
   return (
     <div className="step-stats">
       {stepNumber > 1 && <Button onClick={previousStep}>Volver</Button>}
-      {stepNumber < totalSteps ? (
-        <Button onClick={nextStep}>Continuar</Button>
-      ) : (
-        <Button onClick={submitHandler}>Enviar</Button>
-      )}
+      {
+        <Button onClick={nextStep}>
+          {stepNumber < totalSteps ? "Continuar" : "Enviar"}
+        </Button>
+      }
     </div>
   );
 };

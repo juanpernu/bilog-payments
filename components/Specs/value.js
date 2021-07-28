@@ -4,7 +4,7 @@ const Value = ({ text, price, tooltip, tooltipText, className }) => {
   return (
     <div className="price-wrapper">
       <p className="copy">{text}</p>
-      <p className="price-value">
+      <div className="price-value">
         <span className={className}>$ {price}</span>
         {tooltip && (
           <div className="tooltip">
@@ -14,7 +14,7 @@ const Value = ({ text, price, tooltip, tooltipText, className }) => {
             </div>
           </div>
         )}
-      </p>
+      </div>
     </div>
   );
 };

@@ -1,14 +1,26 @@
-import { formatVersion, splitAddons } from "../../utils";
+import { useRouter } from "next/router";
+
 import { Button } from "../Buttons";
 import Icon from "../Icon";
+import { updateBill } from "../../services/pricingService";
+import { formatVersion, splitAddons } from "../../utils";
 
-const Billing = ({ billing, selectedAddons }) => {
+const Billing = ({ billing, selectedAddons, rowversion, clientId }) => {
+  const router = useRouter();
   const splittedAddons = selectedAddons ? splitAddons(selectedAddons) : [];
   const {
     pricing: { version, price, addons },
     selected: { sms, emkt },
     profCount,
   } = billing;
+
+  const handleSubmit = async () => {
+    onChange();
+    window.scroll(0, 0);
+    await updateBill(billing, rowversion, clientId);
+    router.push("/success");
+  };
+
   const monthlySubtotal =
     parseInt(profCount > 5 ? price.complex : price.simple) +
     parseInt(emkt.price ? emkt.price : 0) +
@@ -29,7 +41,7 @@ const Billing = ({ billing, selectedAddons }) => {
             que recomendamos para tu negocio ya que esta pre-cotización se
             ajusta exactamente a tu negocio en particular.
           </p>
-          <Button modifier="terciary" onClick={() => console.log("hola")}>
+          <Button modifier="terciary" onClick={handleSubmit}>
             <p>Pre-Cotizar ahora</p>
           </Button>
         </div>

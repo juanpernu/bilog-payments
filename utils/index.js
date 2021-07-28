@@ -2,6 +2,9 @@ import axios from "axios";
 
 export const axiosInstance = axios.create({
   baseURL: "https://apibr.bilog.com.ar/",
+  headers: {
+    "Content-Type": "application/json",
+  },
   // `transformResponse` allows changes to the response data to be made before
   // it is passed to then/catch
   transformResponse: [
@@ -24,23 +27,20 @@ export const getVersion = (pricing) => {
     prof_count_number,
   } = pricing;
 
-  let versionId;
-
-  if (prof_count_number === 1 && prof_payment) versionId = "full";
+  if (parseInt(prof_count_number) >= 10) return "custom";
+  if (parseInt(prof_count_number) === 1 && prof_payment) return "full";
   if (
-    prof_count_number > 1 &&
+    parseInt(prof_count_number) > 1 &&
     (prof_payment || add_administration || add_auditory || os_payment)
   )
-    versionId = "full";
+    return "full";
   if (
-    prof_count_number === 1 &&
+    parseInt(prof_count_number) === 1 &&
     (add_administration || add_auditory || os_payment)
   )
-    versionId = "standard";
-  if (prof_count_number > 1) versionId = "smallpremium";
-  if (prof_count_number === 1) versionId = "small";
-
-  return versionId;
+    return "standard";
+  if (parseInt(prof_count_number) > 1) return "smallpre";
+  if (parseInt(prof_count_number) === 1) return "small";
 };
 
 export const formatPricing = (pricing) => {
@@ -54,27 +54,50 @@ export const formatPricing = (pricing) => {
     name,
     phone,
     prof_count_number,
-    pc_count_number,
     profession,
   } = pricing;
 
   return {
-    prof_count_number,
-    pc_count_number,
     client: {
       email,
       name,
       phone,
       profession,
+      prof_count_number,
     },
     version: {
       id: getVersion(pricing),
       addons: {
-        add_administration,
-        add_auditory,
-        add_osde,
-        add_sms,
-        add_facturation,
+        add_administration: add_administration.toString(),
+        add_auditory: add_auditory.toString(),
+        add_osde: add_osde.toString(),
+        add_sms: add_sms.toString(),
+        add_facturation: add_facturation.toString(),
+      },
+    },
+  };
+};
+
+export const formatClientBill = (bill, clientId, rowversion) => {
+  const {
+    pricing: { addons, version },
+    selected,
+  } = bill;
+
+  return {
+    client: {
+      id: parseInt(clientId),
+    },
+    version: {
+      id: version,
+      rowversion,
+      addons: {
+        add_administration: addons.add_administration ? "true" : "false",
+        add_auditory: addons.add_auditory ? "true" : "false",
+        add_osde: addons.add_osde ? "true" : "false",
+        add_sms: selected.sms ? selected.sms.id : null,
+        add_email: selected.emkt ? selected.emkt.id : null,
+        add_fe: null,
       },
     },
   };
@@ -134,3 +157,16 @@ export const billingInitialState = {
 };
 
 export const splitAddons = (addons) => addons.split(",");
+
+export const setUrlVersions = (data, formData) => {
+  const { version, client } = data;
+  const { add_administration, add_auditory, add_osde } = formData;
+
+  let addons = [];
+  if (add_administration) addons.push("adm");
+  if (add_auditory) addons.push("aud");
+  if (add_osde) addons.push("osde");
+
+  if (client.prof_count_number >= 10) return "/success";
+  return `/versions?version=${version.id}&addons=${addons}&profCount=${client.prof_count_number}&clientId=${client.id}&rowVersion=${version.rowversion}`;
+};
