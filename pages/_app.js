@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }) {
         <link
           rel="canonical"
           href="https://www.bilog.com.ar"
-          hreflang="es-ar"
+          hrefLang="es-ar"
         />
         <link rel="shortcut icon" href="/favicon.png" />
         <link

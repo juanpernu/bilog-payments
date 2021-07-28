@@ -78,6 +78,31 @@ export const formatPricing = (pricing) => {
   };
 };
 
+export const formatClientBill = (bill, clientId, rowversion) => {
+  const {
+    pricing: { addons, version },
+    selected,
+  } = bill;
+
+  return {
+    client: {
+      id: parseInt(clientId),
+    },
+    version: {
+      id: version,
+      rowversion,
+      addons: {
+        add_administration: addons.add_administration ? "true" : "false",
+        add_auditory: addons.add_auditory ? "true" : "false",
+        add_osde: addons.add_osde ? "true" : "false",
+        add_sms: selected.sms ? selected.sms.id : null,
+        add_email: selected.emkt ? selected.emkt.id : null,
+        add_fe: null,
+      },
+    },
+  };
+};
+
 export const formatVersion = (version) => {
   const versions = {
     small: "Small",
@@ -142,6 +167,6 @@ export const setUrlVersions = (data, formData) => {
   if (add_auditory) addons.push("aud");
   if (add_osde) addons.push("osde");
 
-  if (client.prof_count_number >= 10) return "/custom";
-  return `/versions?version=${version.id}&addons=${addons}&profCount=${client.prof_count_number}&rowVersion=${version.rowversion}`;
+  if (client.prof_count_number >= 10) return "/success";
+  return `/versions?version=${version.id}&addons=${addons}&profCount=${client.prof_count_number}&clientId=${client.id}&rowVersion=${version.rowversion}`;
 };

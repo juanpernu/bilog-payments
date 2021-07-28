@@ -5,7 +5,7 @@ import Card from "../../components/Card";
 import Icon from "../../components/Icon";
 import Button from "../../components/Button";
 
-const Custom = () => {
+const Success = () => {
   const router = useRouter();
 
   const handleClick = (e) => {
@@ -45,4 +45,4 @@ const Custom = () => {
   );
 };
 
-export default Custom;
+export default Success;
