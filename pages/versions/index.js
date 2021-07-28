@@ -21,7 +21,7 @@ const Versions = ({
   clientId,
 }) => {
   const [billing, setBilling] = useState(billingInitialState);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const {
     lista_sms: sms,
     lista_email: emkt,
@@ -77,7 +77,7 @@ const Versions = ({
             selectedAddons={addons}
             rowversion={rowVersion}
             clientId={clientId}
-            onChange={() => setLoading(true)}
+            onChange={() => setLoading(!loading)}
           />
         </Fragment>
       )}

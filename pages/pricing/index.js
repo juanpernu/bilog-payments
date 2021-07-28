@@ -7,7 +7,7 @@ const Pricing = () => {
   return (
     <section className="pricing">
       {loading && <Loading />}
-      <Wizard onChange={() => setLoading(true)} />
+      <Wizard onChange={() => setLoading(!loading)} />
     </section>
   );
 };

@@ -20,8 +20,11 @@ const Wizard = ({ onChange }) => {
   const submit = async () => {
     onChange();
     const data = await saveNewBilling(userdata);
-    const url = setUrlVersions(data, userdata);
-    router.push(url);
+    if (!data.mensajeError) {
+      const url = setUrlVersions(data, userdata);
+      router.push(url);
+    }
+    onChange();
   };
 
   return (

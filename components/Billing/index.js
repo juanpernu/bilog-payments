@@ -5,7 +5,13 @@ import Icon from "../Icon";
 import { updateBill } from "../../services/pricingService";
 import { formatVersion, splitAddons } from "../../utils";
 
-const Billing = ({ billing, selectedAddons, rowversion, clientId }) => {
+const Billing = ({
+  billing,
+  selectedAddons,
+  rowversion,
+  clientId,
+  onChange,
+}) => {
   const router = useRouter();
   const splittedAddons = selectedAddons ? splitAddons(selectedAddons) : [];
   const {
