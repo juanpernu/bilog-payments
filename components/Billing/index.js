@@ -1,9 +1,7 @@
 import { useRouter } from "next/router";
 
-import { formatVersion, splitAddons } from "../../utils";
 import { Button } from "../Buttons";
 import Icon from "../Icon";
-
 import { updateBill } from "../../services/pricingService";
 import { formatVersion, splitAddons } from "../../utils";
 
