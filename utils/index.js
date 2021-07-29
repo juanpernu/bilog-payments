@@ -54,6 +54,7 @@ export const formatPricing = (pricing) => {
     name,
     phone,
     prof_count_number,
+    pc_count_number = 1, // TODO: When the API is ready, should delete this
     profession,
   } = pricing;
 
@@ -64,6 +65,7 @@ export const formatPricing = (pricing) => {
       phone,
       profession,
       prof_count_number,
+      pc_count_number,
     },
     version: {
       id: getVersion(pricing),
@@ -167,6 +169,6 @@ export const setUrlVersions = (data, formData) => {
   if (add_auditory) addons.push("aud");
   if (add_osde) addons.push("osde");
 
-  if (client.prof_count_number >= 10) return "/success";
-  return `/versions?version=${version.id}&addons=${addons}&profCount=${client.prof_count_number}&clientId=${client.id}&rowVersion=${version.rowversion}`;
+  if (client.prof_count_number > 10) return "/success";
+  return `/versions?version=${version.id}&addons=${addons}&pcCount=${client.pc_count_number}&clientId=${client.id}&rowVersion=${version.rowversion}`;
 };

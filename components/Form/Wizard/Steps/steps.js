@@ -6,6 +6,12 @@ const Steps = [
       key: "prof_count_number",
     },
     {
+      question: "¿En cuantas PC necesitas el software?",
+      hint: "Cantidad de PCs en las que necesitás instalar el software.",
+      field: "numeric",
+      key: "pc_count_number",
+    },
+    {
       question: "¿Necesitas hacer la liquidación a tus profesionales?",
       hint: "Definís montos o porcentajes a pagar a cada profesional por la prestación realizada. Incluso podes hacer un mix de valores a pagar a cada uno.",
       field: "checkbox",

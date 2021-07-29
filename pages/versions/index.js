@@ -15,7 +15,7 @@ import { Addons, AlwaysOnAddons } from "../../components/Addon";
 const Versions = ({
   content,
   addons,
-  profCount,
+  pcCount,
   shallow,
   rowVersion,
   clientId,
@@ -39,7 +39,7 @@ const Versions = ({
           sms,
           emkt,
         },
-        profCount,
+        pcCount,
         selected: billingInitialState.selected,
       }),
     []
@@ -64,7 +64,7 @@ const Versions = ({
         desc={descripcion}
         video={video}
         price={price}
-        profCount={profCount}
+        pcCount={pcCount}
       />
       {!id && <Commons />}
       <Features version={id} />
@@ -90,14 +90,14 @@ export async function getServerSideProps(req, res) {
   const {
     version = "default",
     addons = null,
-    profCount = null,
+    pcCount = null,
     shallow = false,
-    rowVersion,
-    clientId,
+    rowVersion = null,
+    clientId = null,
   } = req.query;
   const { data: content } = await getVersionContent(version);
   return {
-    props: { content, addons, profCount, shallow, rowVersion, clientId },
+    props: { content, addons, pcCount, shallow, rowVersion, clientId },
   };
 }
 

@@ -343,8 +343,12 @@
         cursor: pointer;
       }
 
-      p {
+      .call-to-action {
         margin: 0;
+
+        &.added {
+          color: $bilog-red;
+        }
       }
     }
   }

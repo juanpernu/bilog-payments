@@ -1,9 +1,16 @@
+import { useEffect } from "react";
 import "../styles/style.scss";
 import Head from "next/head";
 import Provider from "./context";
 import Layout from "../components/Layout";
+import ReactGA from "react-ga";
 
 function MyApp({ Component, pageProps }) {
+  useEffect(() => ReactGA.initialize("G-NYX75JRTDD"), []);
+  useEffect(
+    () => ReactGA.pageview(window.location.pathname + window.location.search),
+    [Component]
+  );
   return (
     <Provider>
       <Head>
