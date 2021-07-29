@@ -54,7 +54,7 @@ export const formatPricing = (pricing) => {
     name,
     phone,
     prof_count_number,
-    pc_count_number = 1, // TODO: When the API is ready, should delete this
+    pc_count_number,
     profession,
   } = pricing;
 
