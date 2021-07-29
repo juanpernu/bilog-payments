@@ -79,7 +79,9 @@ const AlwaysOnItem = ({
         className="suscribe-container"
         onClick={() => setSelected(!selected)}
       >
-        <p>Quiero contratarlo</p>
+        <p className={`call-to-action${selected ? " added" : ""}`}>
+          {selected ? "Quitar" : "Agregar al presupuesto"}
+        </p>
       </div>
     </div>
   );

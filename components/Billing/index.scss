@@ -52,6 +52,25 @@
           font-size: 16px;
         }
       }
+      .support {
+        .text {
+          margin-bottom: 12px;
+        }
+        &-list {
+          margin-bottom: 40px;
+          &-item {
+            display: flex;
+            align-items: center;
+            margin: 4px 0;
+            font-weight: $fw-regular;
+            color: #0de4e4;
+
+            .icon {
+              margin-right: 8px;
+            }
+          }
+        }
+      }
     }
 
     .detail {
