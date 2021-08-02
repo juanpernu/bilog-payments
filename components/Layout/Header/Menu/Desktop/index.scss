@@ -1,3 +1,5 @@
+@import '../../../../../styles/variables';
+
 // MOBILE
 @media (min-width: 320px) and (max-width: 767px) {
   .menu-desktop-items {
@@ -20,14 +22,14 @@
     border: 0;
     font-size: 14px;
     padding: 10px;
-    color: #777;
+    color: $bilog-gray-dark-light;
     text-transform: uppercase;
     text-decoration: none;
     transition: 0.3s ease;
     display: inline-block;
-  
+
     &:hover {
-      color: #0090ff;
+      color: $bilog-blue-medium;
       cursor: pointer;
     }
     .title {
@@ -35,7 +37,7 @@
       display: inline-block;
     }
     .special {
-      color: #0076ff;
+      color: $bilog-blue;
     }
   }
 }

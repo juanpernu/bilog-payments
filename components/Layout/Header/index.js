@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import Desktop from "./Desktop";
-import Mobile from "./Mobile";
+import { Desktop, Mobile } from "./Menu";
 
 const Header = () => {
   const [isToggle, setIsToggle] = useState(false);

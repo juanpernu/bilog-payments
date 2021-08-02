@@ -1,16 +1,15 @@
 import React from "react";
 import Link from "next/link";
-import Icon from "../../../Icon";
-import { ToggleButton } from "../../../Buttons";
+import Icon from "../../../../Icon";
 
 const Mobile = ({ isToggle, handleOnClick }) => {
   const icon = isToggle ? 'cross' : 'bars';
 
   return (
     <span className="menu-mobile-items">
-      <ToggleButton onclick={handleOnClick}>
+      <button className="toggle-button" onClick={handleOnClick}>
         <Icon colorFill="#666" type={icon} width={24} height={24} />
-      </ToggleButton>
+      </button>
       <aside
         className={`menu-mobile-aside ${isToggle ? 'open' : 'closed'}`}
       >

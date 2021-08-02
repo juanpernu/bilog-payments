@@ -1,5 +1,5 @@
-@import "./Desktop/index.scss";
-@import "./Mobile/index.scss";
+@import "../../../styles/variables";
+@import "./Menu/index.scss";
 
 /* STYLES FOR MOBILE */
 @media only screen and (max-width: 750px) {
@@ -34,7 +34,7 @@
     border: 0;
     font-size: 14px;
     padding: 10px;
-    color: #777;
+    color: $bilog-gray-dark-light;
     text-transform: uppercase;
     text-decoration: none;
     transition: 0.3s ease;
@@ -45,7 +45,7 @@
       display: inline-block;
     }
     .special {
-      color: #0076ff;
+      color: $bilog-blue;
     }
   }
 }
@@ -58,7 +58,7 @@
     letter-spacing: 0.2px;
     display: flex;
     width: 100%;
-    background: #fff;
+    background: $bilog-white;
     box-shadow: 0 5px 10px rgba(0,0,0,0.12);
 
     .logo {
@@ -80,28 +80,5 @@
     padding: 0 20px;
     position: relative;
     align-items: center;
-  }
-  .link {
-    margin-right: 15px;
-    border: 0;
-    font-size: 14px;
-    padding: 10px;
-    color: #777;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: 0.3s ease;
-    display: inline-block;
-
-    &:hover {
-      color: #0090ff;
-      cursor: pointer;
-    }
-    .title {
-      cursor: pointer;
-      display: inline-block;
-    }
-    .special {
-      color: #0076ff;
-    }
   }
 }

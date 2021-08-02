@@ -1,3 +1,5 @@
+ @import '../../../../../styles/variables';
+ 
  // MOBILE
  @media (min-width: 320px) and (max-width: 767px) {
   .menu-mobile-items {
@@ -7,13 +9,27 @@
       margin-right: 0 ;
     }
 
+    .toggle-button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      box-shadow: none;
+    
+      &:focus {
+        outline: none;
+      }
+    }
+
     .menu-mobile-aside {
       &.closed {
         display: none;
       }
 
       &.open {
-        background-color: #fff;
+        background-color: $bilog-white;
         left: 0;
         position: absolute;
         z-index: 200;
