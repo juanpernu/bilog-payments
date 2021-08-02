@@ -6,7 +6,7 @@ import Provider from "./context";
 import Layout from "../components/Layout";
 
 function MyApp({ Component, pageProps }) {
-  useEffect(() => TagManager.initialize("GTM-K668KS3"), []);
+  useEffect(() => TagManager.initialize({ gtmId: "GTM-K668KS3" }), []);
   return (
     <Provider>
       <Head>
