@@ -6,11 +6,10 @@ import Icon from "../../Icon";
 const Feature = () => {
   const router = useRouter();
 
-  const handleOnClick = async () => {
+  const handleOnClick = () =>
     router.push({
-      pathname: url,
+      pathname: "https://www.bilog.com.ar/bilogApp",
     });
-  };
 
   return (
     <div className="banner-card">
@@ -30,7 +29,7 @@ const Feature = () => {
             desde distintos dispositivos en forma simultánea y en red.
           </p>
           <div className="buttons">
-            <Button modifier="primary" onClick={() => handleOnClick()}>
+            <Button modifier="primary" onClick={handleOnClick}>
               Descubrí la app
             </Button>
           </div>
