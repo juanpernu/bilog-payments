@@ -7,9 +7,11 @@ import BackArrow from "./arrow-back";
 import Budget from "./budget";
 import Billing from "./billing";
 import Bank from "./bank";
+import Bars from "./bars";
 import Check from "./check";
 import Close from "./close";
 import Control from "./control";
+import Cross from "./cross";
 import Cloud from "./cloud";
 import Debts from "./debts";
 import Email from "./email";
@@ -35,12 +37,14 @@ const icons = {
   arrowright: ArrowRight,
   arrowleft: ArrowLeft,
   bank: Bank,
+  bars: Bars,
   budget: Budget,
   billing: Billing,
   check: Check,
   close: Close,
   cloud: Cloud,
   control: Control,
+  cross: Cross,
   debts: Debts,
   email: Email,
   images: Images,
