@@ -38,6 +38,16 @@
         @media (min-width: 320px) and (max-width: 767px) {
           padding: 20px 40px;
         }
+
+        // TABLET
+        @media (min-width: 768px) and (max-width: 1023px) {
+          padding: 30px 20px 30px 30px;
+        }
+
+        // IPAD PRO
+        @media (min-width: 1024px) and (max-width: 1366px) {
+          padding: 30px 20px 30px 30px;
+        }
       }
 
       &.right {
@@ -55,6 +65,16 @@
           border-bottom-right-radius: 30px;
           border-bottom-left-radius: 30px;
           padding: 20px 40px;
+        }
+        
+        // TABLET
+        @media (min-width: 768px) and (max-width: 1023px) {
+          padding: 30px 10px 30px 40px;
+        }
+
+        // IPAD PRO
+        @media (min-width: 1024px) and (max-width: 1366px) {
+          padding: 30px 20px 30px 50px;
         }
 
         .title {
