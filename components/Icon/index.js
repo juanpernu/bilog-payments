@@ -14,6 +14,7 @@ import Control from "./control";
 import Cross from "./cross";
 import Cloud from "./cloud";
 import Debts from "./debts";
+import Devices from "./devices";
 import Email from "./email";
 import GeneralStatistics from "./general-statistics";
 import Images from "./images";
@@ -46,6 +47,7 @@ const icons = {
   control: Control,
   cross: Cross,
   debts: Debts,
+  devices: Devices,
   email: Email,
   images: Images,
   laboratory: Laboratory,

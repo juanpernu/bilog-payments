@@ -20,11 +20,20 @@
     max-width: 1200px;
     margin: 0 auto;
 
+    .subtitle {
+      // MOBILE
+      @media (min-width: 320px) and (max-width: 767px) {
+        font-size: 32px;
+        font-weight: $fw-bold;
+      }
+    }
+
     .text {
       font-size: 20px;
       font-weight: 100;
       line-height: 1.5;
       margin: 20px 0 30px;
+      color: $bilog-white;
     }
 
     .discover {

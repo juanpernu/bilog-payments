@@ -1,73 +1,74 @@
 $footer-light-bg: #fafafa;
 $footer-light-order: 1px solid #eaeaea;
 
-/* STYLES FOR MOBILE */
-@media only screen and (max-width: 750px) {
-  .footer.light {
+.footer {
+  background: #000;
+  border-top: 1px solid #333;
+
+  &.light {
     background: $footer-light-bg;
     border-top: $footer-light-order;
-  }
-  .footer--links {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .wrapper {
-    padding: 60px 0;
-    display: flex;
-    flex-direction: column;
-  }
-  .wrapper--text {
-    margin: 0 30px;
-  }
-  .copyright {
-    color: #999999;
-    font-size: 12px;
-  }
-  .logo {
-    height: 25px;
-    width: auto;
-  }
-}
 
-/* STYLES FOR DESKTOP */
-@media only screen and (min-width: 751px) {
-  .footer {
-    background: #000;
-    border-top: 1px solid #333;
-
-    &.light {
+    // MOBILE
+    @media (min-width: 320px) and (max-width: 767px) {
       background: $footer-light-bg;
       border-top: $footer-light-order;
     }
+  }
 
-    .wrapper {
-      max-width: 1024px;
-      margin: 0 auto;
-      padding: 60px 0;
-      display: flex;
-      justify-content: space-between;
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-between;
 
-      &--text {
-        margin: 0 50px;
-      }
-
-      .copyright {
-        text-align: right;
-        color: $bilog-gray;
-        font-size: 12px;
-      }
-
-      .logo {
-        height: 25px;
-        width: auto;
-      }
+    // IPAD PRO
+    @media (min-width: 1024px) and (max-width: 1366px) {
+      padding: 60px 40px;
     }
 
-    &--links {
-      max-width: 1024px;
-      margin: 0 auto;
-      display: flex;
+    // TABLET
+    @media (min-width: 768px) and (max-width: 1023px) {
+      padding: 60px 40px;
+    }
+
+    // MOBILE
+    @media (min-width: 320px) and (max-width: 767px) {
+      flex-direction: column;
       align-items: flex-start;
+      padding: 60px 20px;
+    }
+
+    .copyright {
+      text-align: right;
+      color: $bilog-gray;
+      font-size: 12px;
+    }
+
+    .logo {
+      height: 25px;
+      width: auto;
+    }
+  }
+
+  &--links {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+
+    // MOBILE
+    @media (min-width: 320px) and (max-width: 767px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &--text {
+    // MOBILE
+    @media (min-width: 320px) and (max-width: 767px) {
+      margin: 0 30px;
     }
   }
 }
