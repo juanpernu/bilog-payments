@@ -107,6 +107,16 @@
           padding: 20px 40px;
         }
 
+        // TABLET
+        @media (min-width: 768px) and (max-width: 1023px) {
+          padding: 30px 10px 30px 40px;
+        }
+
+        // IPAD PRO
+        @media (min-width: 1024px) and (max-width: 1366px) {
+          padding: 30px 20px 30px 50px;
+        }
+
         .annotation {
           .copy {
             font-size: 24px;

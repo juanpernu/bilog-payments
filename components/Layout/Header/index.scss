@@ -1,27 +1,31 @@
+@import "../../../styles/variables";
+@import "./Menu/index.scss";
+
 /* STYLES FOR MOBILE */
 @media only screen and (max-width: 750px) {
   .header {
     border-bottom: 1px solid rgb(234, 234, 234);
     display: flex;
-    padding: 20px;
+    width: 100%;
     letter-spacing: 0.2px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.12);
 
     .logo {
       height: 45px;
       width: auto;
+      margin-right: 15px;
     }
   }
   .menu {
-    width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+    padding: 20px;
     display: flex;
     flex-direction: row;
     max-width: 100%;
     position: relative;
     align-items: center;
+    justify-content: space-between;
 
-    &-item {
+    &-logo {
       margin-right: 20px;
     }
   }
@@ -30,7 +34,7 @@
     border: 0;
     font-size: 14px;
     padding: 10px;
-    color: #777;
+    color: $bilog-gray-dark-light;
     text-transform: uppercase;
     text-decoration: none;
     transition: 0.3s ease;
@@ -41,7 +45,7 @@
       display: inline-block;
     }
     .special {
-      color: #0076ff;
+      color: $bilog-blue;
     }
   }
 }
@@ -54,12 +58,13 @@
     letter-spacing: 0.2px;
     display: flex;
     width: 100%;
-    background: #fff;
+    background: $bilog-white;
     box-shadow: 0 5px 10px rgba(0,0,0,0.12);
 
     .logo {
       height: 45px;
       width: auto;
+      margin-right: 15px;
 
       &:hover {
         cursor: pointer;
@@ -75,36 +80,5 @@
     padding: 0 20px;
     position: relative;
     align-items: center;
-
-    &-item {
-      margin-right: 20px;
-
-      &:last-of-type {
-        margin-right: 0 ;
-      }
-    }
-  }
-  .link {
-    margin-right: 15px;
-    border: 0;
-    font-size: 14px;
-    padding: 10px;
-    color: #777;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: 0.3s ease;
-    display: inline-block;
-
-    &:hover {
-      color: #0090ff;
-      cursor: pointer;
-    }
-    .title {
-      cursor: pointer;
-      display: inline-block;
-    }
-    .special {
-      color: #0076ff;
-    }
   }
 }
