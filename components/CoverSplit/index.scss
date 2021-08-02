@@ -2,10 +2,10 @@
 
 .cover-split {
   width: 100%;
-  background: rgb(231, 237, 252);
+  background: #f6f9ff;
   background: linear-gradient(
     90deg,
-    rgba(231, 237, 252, 1) 58%,
+    #f6f9ff 58%,
     rgba(60, 93, 170, 1) 58%,
     rgba(60, 93, 170, 1) 100%
   );
@@ -18,7 +18,6 @@
   &-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 250px;
     max-width: 1200px;
     margin: 0 auto;
 
@@ -28,15 +27,66 @@
     }
 
     .content {
-      height: 100%;
+      .annotation {
+        .copy {
+          color: $bilog-gray;
+          font-weight: $fw-light;
+          margin: 0 0 6px 0;
+        }
+
+        .title {
+          font-size: 44px;
+          margin-bottom: 24px;
+        }
+      }
 
       &.left {
-        background: $bilog-gray-blue-light;
-        padding: 30px 60px 30px 0;
+        padding: 60px 60px 60px 0;
 
         // MOBILE
         @media (min-width: 320px) and (max-width: 767px) {
           padding: 20px 40px;
+        }
+
+        .annotation {
+          .copy,
+          .title {
+            color: $bilog-blue;
+          }
+
+          .title {
+            // IPAD PRO
+            @media (min-width: 1024px) and (max-width: 1366px) {
+              font-size: 40px;
+            }
+
+            // TABLET
+            @media (min-width: 768px) and (max-width: 1023px) {
+              font-size: 36px;
+            }
+            // MOBILE
+            @media (min-width: 320px) and (max-width: 767px) {
+              font-size: 32px;
+              line-height: 1.4;
+            }
+          }
+          .copy {
+            font-size: 32px;
+
+            // IPAD PRO
+            @media (min-width: 1024px) and (max-width: 1366px) {
+              font-size: 24px;
+            }
+            // TABLET
+            @media (min-width: 768px) and (max-width: 1023px) {
+              font-size: 28px;
+            }
+            // MOBILE
+            @media (min-width: 320px) and (max-width: 767px) {
+              font-size: 20px;
+              line-height: 1.4;
+            }
+          }
         }
       }
 
@@ -48,7 +98,7 @@
           rgba(60, 93, 170, 1) 100%
         );
         border-bottom-left-radius: 60px;
-        padding: 30px 0 30px 60px;
+        padding: 60px 0 60px 60px;
 
         // MOBILE
         @media (min-width: 320px) and (max-width: 767px) {
@@ -57,14 +107,49 @@
           padding: 20px 40px;
         }
 
-        .title {
-          color: $bilog-white;
-          margin-bottom: 45px;
+        .annotation {
+          .copy {
+            font-size: 24px;
+            margin-bottom: 32px;
+            font-weight: $fw-bold;
+            color: $bilog-white;
 
-          // MOBILE
-          @media (min-width: 320px) and (max-width: 767px) {
-            margin-bottom: 30px;
+            // MOBILE
+            @media (min-width: 320px) and (max-width: 767px) {
+              margin: 0;
+              font-size: 20px;
+              font-weight: $fw-regular;
+            }
           }
+
+          .subtitle {
+            color: $bilog-white;
+            font-size: 32px;
+
+            // MOBILE
+            @media (min-width: 320px) and (max-width: 767px) {
+              font-size: 28px;
+              margin: 30px 0;
+            }
+          }
+        }
+      }
+
+      &.left,
+      &.right {
+        // IPAD PRO
+        @media (min-width: 1024px) and (max-width: 1366px) {
+          padding: 60px;
+        }
+
+        // TABLET
+        @media (min-width: 768px) and (max-width: 1023px) {
+          padding: 60px;
+        }
+
+        // MOBILE
+        @media (min-width: 320px) and (max-width: 767px) {
+          padding: 40px 20px;
         }
       }
 

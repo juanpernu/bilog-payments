@@ -12,6 +12,7 @@ import Close from "./close";
 import Control from "./control";
 import Cloud from "./cloud";
 import Debts from "./debts";
+import Devices from "./devices";
 import Email from "./email";
 import GeneralStatistics from "./general-statistics";
 import Images from "./images";
@@ -42,6 +43,7 @@ const icons = {
   cloud: Cloud,
   control: Control,
   debts: Debts,
+  devices: Devices,
   email: Email,
   images: Images,
   laboratory: Laboratory,

@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
-import { Button } from "../Buttons";
+import { Button } from "../../Buttons";
 
-const BannerCta = ({ title, buttonMod, buttonText, url }) => {
+const WithCta = ({ title, buttonMod, buttonText, url }) => {
   const router = useRouter();
 
   const handleOnClick = async () => {
@@ -24,4 +24,4 @@ const BannerCta = ({ title, buttonMod, buttonText, url }) => {
   );
 };
 
-export default BannerCta;
+export default WithCta;
