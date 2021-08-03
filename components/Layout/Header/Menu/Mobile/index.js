@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import Icon from "../../../../Icon";
 
 const Mobile = ({ isToggle, handleOnClick }) => {
   const icon = isToggle ? 'cross' : 'bars';
 
+  const elemRef = useRef(null);
+
+  const handleClickOutside = () => handleOnClick();
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+  }, []);
+
   return (
-    <span className="menu-mobile-items">
+    <span className="menu-mobile-items" ref={elemRef}>
       <button className="toggle-button" onClick={handleOnClick}>
         <Icon colorFill="#666" type={icon} width={24} height={24} />
       </button>
