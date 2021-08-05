@@ -4,7 +4,8 @@
   "scripts": {
     "start-dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -21,5 +22,8 @@
     "node": ">14.16.0",
     "iojs": ">6.14.11"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^8.1.0"
+  }
 }
