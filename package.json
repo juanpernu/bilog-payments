@@ -5,10 +5,8 @@
     "start-dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "cy-open": "cypress open",
-    "cy-run-all": "cypress run --spec 'cypress/integration/*'",
-    "test": "start-server-and-test start-dev http://localhost:3000 cy-run-all",
-    "test-e2e": "start-server-and-test start-dev http://localhost:3000 cy-open"
+    "test-e2e": "start-server-and-test start-dev http://localhost:3000 cy-start",
+    "cy-start": "concurrently \"cypress open\" \"cypress run\""
   },
   "dependencies": {
     "axios": "^0.21.1",
