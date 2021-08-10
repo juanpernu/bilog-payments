@@ -5,7 +5,10 @@
     "start-dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "cypress:open": "cypress open"
+    "cy-open": "cypress open",
+    "cy-run-all": "cypress run --spec 'cypress/integration/*'",
+    "test": "start-server-and-test start-dev http://localhost:3000 cy-run-all",
+    "test-e2e": "start-server-and-test start-dev http://localhost:3000 cy-open"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -24,6 +27,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "cypress": "^8.1.0"
+    "cypress": "^8.1.0",
+    "start-server-and-test": "^1.13.1"
   }
 }
