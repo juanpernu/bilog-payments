@@ -80,6 +80,10 @@ describe('Pricing Flow', function () {
 
     cy.get('.step-stats > .primary')
       .contains('Enviar')
-      .click();
+
+    cy.visit('/versions?version=full&addons=aud,osde&pcCount=2&clientId=53&rowVersion=AAAAAAAOhls=');
+
+    cy.url()
+      .should('includes', '/versions?version=full&addons=aud,osde&pcCount=2&clientId=53&rowVersion=AAAAAAAOhls=');
   });
 });
