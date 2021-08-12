@@ -1,6 +1,3 @@
-import { mockUserData } from "../fixtures";
-import { setUrlVersions } from "../../utils";
-
 describe("Pricing Flow", function () {
   it("Continue without filling any field.", function () {
     cy.visit("/pricing");
@@ -55,15 +52,9 @@ describe("Pricing Flow", function () {
       );
 
     cy.get(".step-stats > .primary").contains("Enviar");
-  });
 
-  it("Mock API GET data to /version", function () {
-    const mockData = {
-      version: { id: "full", rowversion: "AAAAAAAOhls=" },
-      client: { id: 53, pc_count_number: 2 },
-    };
-    const url = setUrlVersions(mockData, mockUserData);
-    cy.visit(url);
+    cy.visit("/versions?version=full&addons=adm,aud,osde&pcCount=2&clientId=53&rowVersion=AAAAAAAOhls=");
+
     cy.url().should(
       "includes",
       "/versions?version=full&addons=adm,aud,osde&pcCount=2&clientId=53&rowVersion=AAAAAAAOhls="
