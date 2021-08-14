@@ -15,7 +15,7 @@ export const ProductCardsContent = [
     },
     copy: "Para varios profesionales",
     title: "Small Premium",
-    text: "Igual a la versión Small pero podés gestionar varios profesionales y tener varias agendas.",
+    text: "Similiar en funcionalidad a la Small pero podés gestionar varios profesionales y tener varias agendas.",
   },
   {
     plan: {
@@ -33,6 +33,6 @@ export const ProductCardsContent = [
     },
     copy: "Para varios profesionales",
     title: "Full",
-    text: "Ideal para consultorios odontológicos y clínicas dentales. Vas a poder manejar las agendas de varios profesionales y realizar sus liquidaciones.",
+    text: "Ideal para consultorios odontológicos y clínicas dentales. Vas a manejar a varios profesionales y llevar KPI's de gestión.",
   },
 ];

@@ -25,8 +25,9 @@ const Feature = () => {
           <h4 className="subtitle">Llevá tu consultorio a todos lados</h4>
           <p className="text">
             Con tu suscripción mensual podes manejar tu consultorio desde tu
-            telefono con nuestra app mobile. Te da la posibilidad de acceder
-            desde distintos dispositivos en forma simultánea y en red.
+            telefono con nuestra app mobile. Te da la posibilidad de acceder a
+            tus datos desde distintos dispositivos en forma inmediata y en
+            tiempo real.
           </p>
           <div className="buttons">
             <Button modifier="primary" onClick={handleOnClick}>

@@ -15,7 +15,7 @@ const Default = [
     icon: "images",
     title: "Imágenes",
     description:
-      "La seguridad de tus datos es lo más importante para nosotros. Por eso el sistema cuenta con la función de copias de seguridad automáticas.",
+      "Tenés la información centralizada, contás con la historia clínica del paciente y las imágenes. Ahora podés guardar desde la ficha papel escaneada hasta las imágenes de gran tamaño. ¡Te asesoramos!",
   },
   {
     icon: "budget",

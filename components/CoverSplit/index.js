@@ -22,8 +22,8 @@ const CoverSplit = ({ url }) => {
             </h2>
           </div>
           <p className="copy">
-            Te invitamos a simular tu cuota y a conocer la cobertura de nuestros
-            planes.
+            Te invitamos a simular tu inversión y a conocer la cobertura de
+            nuestros planes.
           </p>
         </div>
         <div className="content right">
