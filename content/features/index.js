@@ -1,9 +1,9 @@
 const Default = [
   {
-    icon: "cloud",
-    title: "Copia de seguridad Online",
+    icon: "alert",
+    title: "Alertas y notificaciones",
     description:
-      "La seguridad de tus datos es lo más importante para nosotros. Por eso el sistema cuenta con la función de copias de seguridad automáticas.",
+      "Con esta opción vas a saber a quienes tenés que recitar para control, las tareas a realizar, los trabajos de laboratorio que tienen que ingresar y el stock de tu consultorio. Puntos claves para optimizar tu trabajo.",
   },
   {
     icon: "schedule",
@@ -18,22 +18,22 @@ const Default = [
       "Tenés la información centralizada, contás con la historia clínica del paciente y las imágenes. Ahora podés guardar desde la ficha papel escaneada hasta las imágenes de gran tamaño. ¡Te asesoramos!",
   },
   {
+    icon: "notes",
+    title: "Historia clínica y odontograma",
+    description:
+      "Odontograma interactivo y evolutivo, completo y fácil de utilizar. Guiate de forma sencilla por los colores y símbolos que indican el estado de la pieza dental. ¡Cargá la historia clínica del paciente con el dictado por voz desde la App!",
+  },
+  {
     icon: "budget",
-    title: "Presupuestos",
+    title: "Presupuestos y pagos",
     description:
-      "La seguridad de tus datos es lo más importante para nosotros. Por eso el sistema cuenta con la función de copias de seguridad automáticas.",
+      "Llevar el control de los presupuestos y pagos de tus pacientes nunca fue tan simple. Configurá tus medios de pago y visualizá de forma sencilla la cuenta corriente de los pacientes.",
   },
   {
-    icon: "bank",
-    title: "Cta. Cte. de pacientes",
+    icon: "devices",
+    title: "App Mobile",
     description:
-      "La seguridad de tus datos es lo más importante para nosotros. Por eso el sistema cuenta con la función de copias de seguridad automáticas.",
-  },
-  {
-    icon: "debts",
-    title: "Informe de saldos deudores",
-    description:
-      "La seguridad de tus datos es lo más importante para nosotros. Por eso el sistema cuenta con la función de copias de seguridad automáticas.",
+      "App en IOS y Android para que los profesionales del consultorio o clínica tengan acceso en línea al estado de sus citas, pacientes, presupuestos, etc. ¡Configurá los permisos de acceso personalizados por usuario! Administrá la información sensible.",
   },
 ];
 

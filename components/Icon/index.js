@@ -4,6 +4,7 @@ import Admin from "./admin";
 import ArrowRight from "./arrow-right";
 import ArrowLeft from "./arrow-left";
 import BackArrow from "./arrow-back";
+import Alert from "./alert";
 import Budget from "./budget";
 import Billing from "./billing";
 import Bank from "./bank";
@@ -20,6 +21,7 @@ import GeneralStatistics from "./general-statistics";
 import Images from "./images";
 import Laboratory from "./laboratory";
 import MedicalInsurance from "./medical-insurance";
+import Notes from "./notes";
 import Professionals from "./professionals";
 import Send from "./send";
 import Sms from "./sms";
@@ -34,6 +36,7 @@ import Wand from "./wand";
 
 const icons = {
   admin: Admin,
+  alert: Alert,
   back: BackArrow,
   arrowright: ArrowRight,
   arrowleft: ArrowLeft,
@@ -51,6 +54,7 @@ const icons = {
   email: Email,
   images: Images,
   laboratory: Laboratory,
+  notes: Notes,
   wand: Wand,
   send: Send,
   stock: Stock,
