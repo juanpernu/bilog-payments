@@ -17,7 +17,7 @@ const Versions = ({
   addons,
   pcCount,
   shallow,
-  rowVersion,
+  parsedRv: rowVersion,
   clientId,
 }) => {
   const [billing, setBilling] = useState(billingInitialState);
@@ -96,8 +96,11 @@ export async function getServerSideProps(req, res) {
     clientId = null,
   } = req.query;
   const { data: content } = await getVersionContent(version);
+
+  // TODO review this parsed query param
+  const parsedRv = rowVersion && rowVersion.replace(" ", "+");
   return {
-    props: { content, addons, pcCount, shallow, rowVersion, clientId },
+    props: { content, addons, pcCount, shallow, parsedRv, clientId },
   };
 }
 
