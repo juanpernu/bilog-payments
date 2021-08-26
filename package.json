@@ -25,6 +25,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "concurrently": "^6.2.1",
     "cypress": "^8.1.0",
     "start-server-and-test": "^1.13.1"
   }
