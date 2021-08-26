@@ -3,13 +3,13 @@ const Default = [
     icon: "alert",
     title: "Alertas y notificaciones",
     description:
-      "Con esta opción vas a saber a quienes tenés que recitar para control, las tareas a realizar, los trabajos de laboratorio que tienen que ingresar y el stock de tu consultorio. Puntos claves para optimizar tu trabajo.",
+      "Alertas para saber a quienes tenés que recitar, las tareas a realizar, los trabajos de laboratorio que ingresan hoy y el stock mínimo de tu consultorio. Puntos claves para optimizar tu trabajo.",
   },
   {
     icon: "schedule",
     title: "Agenda de turnos",
     description:
-      "Agenda turnos en forma eficiente, mantene tu agenda siempre completa, tenés miles de herramientas como la lista de espera, la confirmación de turnos, y el envío de mails, que te ayudan a gestionarla. ¡Anímate a descubrirlas!",
+      "Agenda turnos en forma eficiente, mantené tu agenda siempre completa, herramientas como lista de espera, confirmación de turnos y envío de mails, te ayudan a gestionarla. ¡Anímate a descubrirlas!",
   },
   {
     icon: "images",
